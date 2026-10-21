@@ -1,0 +1,317 @@
+[
+  {
+    "objectID": "session_notes/2026-11-05_research.html",
+    "href": "session_notes/2026-11-05_research.html",
+    "title": "03 Research",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "03 Research"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-12-17_plot.html",
+    "href": "session_notes/2026-12-17_plot.html",
+    "title": "09 Plot",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "09 Plot"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-11-19_workflow.html",
+    "href": "session_notes/2026-11-19_workflow.html",
+    "title": "05 Workflow",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "05 Workflow"
+    ]
+  },
+  {
+    "objectID": "session_notes/2027-01-07_text.html",
+    "href": "session_notes/2027-01-07_text.html",
+    "title": "10 Text",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "10 Text"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-11-12_server.html",
+    "href": "session_notes/2026-11-12_server.html",
+    "title": "04 Server",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "04 Server"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-12-03_storytelling.html",
+    "href": "session_notes/2026-12-03_storytelling.html",
+    "title": "07 Storytelling",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "07 Storytelling"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-22_tools.html",
+    "href": "session_notes/2026-10-22_tools.html",
+    "title": "01 Tools",
+    "section": "",
+    "text": "HinweisWorum es heute geht\n\n\n\n\nTheorie:\n\nGrundprinzipien der Datenarbeit (Zeit- und Projektplanung)\nDatenquellen, Lizenzen & Open Data\n\nPraxis:\n\nTabellarische Dateiformate in Tabellenkalkulation laden und aufbereiten\nFragen an einen Datensatz entwickeln\nTabelle aus PDF extrahieren\n\nTechnik:\n\nDateiformate: csv, Tabellen in PDF\nTools: LibreOffice, Datawrapper, Tabula, Developertools\n\nDaten:\n\nHundebiss-Statistik Berlin & Rheinland-Pfalz",
+    "crumbs": [
+      "01 Tools"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-22_tools.html#storytelling-die-grundlagen",
+    "href": "session_notes/2026-10-22_tools.html#storytelling-die-grundlagen",
+    "title": "01 Tools",
+    "section": "Storytelling – Die Grundlagen",
+    "text": "Storytelling – Die Grundlagen\n\n1. Was ist eine Geschichte?\nGute Frage, hierzu könnte man ein eigenes Studium machen. Oder man nimmt die Abkürzung und liest ein Buch wie beispielsweise “Storytelling” von Sven Preger, der vor allem Audio-Geschichten erzählt, z.B. für den Deutschlandfunk oder den WDR. Darin steht:\n“Eine Geschichte besteht in aller Regel aus drei Basis-Elementen: eine aktiv-handelnde Person, ein konkretes Ziel und (etliche) Widerstände.\nEs gibt viele Möglichkeiten, diese Basis-Elemente zu strukturieren. In der Erzähltheorie gibt es verschiedene Modelle, wie Handlungen strukturiert sein können. Ganz klassisch, wie in den Dramen von Goethe und Schiller lernt man in der Schule oft den Aufbau, der sich bis auf Sophokles im antiken Griechenland zurückführen lässt: auslösendes Moment im ersten Akt, Zuspitzung des Konflikts im zweiten Akt, Herausforderung im dritten, Höhepunkt im vierten und dann die Auflösung im fünften Akt. Hier eine Abbildung aus einem mehr oder weniger zufällig ausgewählten Lehrbuch (Harzer 2017, 197):\n\n\n\n\n\nInsbesondere in der Filmindustrie ist mittlerweile aber auch das Konzept der “Heldenreise” verbreitet, hier dargestellt von Sven Preger in seinem Buch “Storytelling” (S. 74):\n\nDas ist natürlich ganz schön detailliert und komplex. Um die eigene Geschichte zu strukturieren, schlägt Sven Preger deshalb, kurz und prägnant, einen Erzählsatz vor:\n\n“A (der Protagonist) will B (seine Absicht/sein Ziel), weil er C (die Motivation), stößt aber auf D (Hindernisse). Diese Hindernisse muss der Protagonist überwinden, oder es zumindest versuchen. Der Erzählsatz ist damit der Kompass, an dem sich die Geschichte ausrichtet.”\n\n\n\n2. Was ist eine Nachricht?\nJetzt soll eine Geschichte ja in unserem Fall nicht fiktional sein, sondern vor allem Wissen vermitteln. Aber was ist überhaupt relevant, und damit vermittelnswert?\nIm Journalismus gibt es unterschiedliche Darstellungsformen. Grob unterteilt man in informierende und meinungsäußernde Formen. Informierend sind Nachrichten, Reportagen, Interviews oder Korrespondentenberichte. Meinungsäußernd ist zum Beispiel der Kommentar.\nEine Nachricht sollte möglichst viele der sieben wichten Fragen beantworten – diese können wir verwenden, um Fragen an unsere Daten zu entwickeln:\n\nWer? (Wer hat am meisten…? Wer hat am wenigsten…?)\nWas? (Was ist anders als vielleicht angenommen?)\nWo? (Wo häufen sich die Ereignisse?)\nWann? (Wann hat sich etwas verändert? Wie hat sich etwas entwickelt?)\nWie? (Wie hängen x und y zusammen?)\n(Warum?)\nWoher? (Woher kommen die Daten? Wer hat sie mit welchem Interesse erhoben?)\n\n(siehe Einführung in den praktischen Journalismus)\n\n\n\n\n\n\nHinweisPraktische Probe, ob eine Nachricht relevant ist\n\n\n\nDer “Küchenzuruf”: Eine Zusammenfassung der zentralen Aussage in maximal zwei Sätzen. Der Begriff wurde vom Stern-Redakteur Henri Nannen geprägt und durch eine beispielhafte Situation erklärt, in der ein gewisser Hans im Esszimmer den ‚Stern‘ liest, während „Frau Grete“ in der Küche „sich die Schürze umbindet, um sich für den Abwasch vorzubereiten“. Nach „beendigter Lektüre“ ruft Hans seiner Grete in die Küche zu: „Mensch Grete, die in Bonn spinnen komplett! Die wollen schon wieder die Steuern erhöhen!“\nDas würde man heute hoffentlich anders erklären, aber das Prinzip bleibt das gleiche:\n“Hey, hast du schon gehört? …!”",
+    "crumbs": [
+      "01 Tools"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-22_tools.html#grundprinzipien-der-datenarbeit",
+    "href": "session_notes/2026-10-22_tools.html#grundprinzipien-der-datenarbeit",
+    "title": "01 Tools",
+    "section": "Grundprinzipien der Datenarbeit",
+    "text": "Grundprinzipien der Datenarbeit\n\n\n\n\n\n\nWir verändern niemals Originaldaten.\nWir arbeiten möglichst nachvollziehbar, also möglichst nah am Original.\nWir dokumentieren unsere Arbeitsschritte, um sie reproduzieren zu können.\n\n\n→ Wir rechnen also mit Fehlern und arbeiten so, dass wir sie finden und korrigieren können.\n\n\nDas Ding mit der Objektivität…\nDie Vorstellung, Journalismus müsse “neutral” sein, ist weit verbreitet. Tatsächlich steht im Medienstaatsvertrag aber kein Wort von Neutralität in Bezug auf den Journalismus. Stattdessen sind die öffentlich-rechtlichen Medienanstalten verpflichtet zur “unabhängigen, sachlichen, wahrheitsgemäßen und umfassenden Information und Berichterstattung”. (Kann man nachlesen oder in sechs Minuten hier nachhören.)\nEin verbreitetes Zitat stammt von dem Fernseh-Journalisten Hanns Joachim Friedrichs: “Einen guten Journalisten erkennt man daran, dass er sich nicht gemein macht mit einer Sache, auch nicht mit einer guten Sache.” Das kann ohne Kontext aber leicht missverstanden werden und wird immer wieder diskutiert. Die beste Einordnung liefert ein Text von Uebermedien. Der Kern: Journalist*innen müssen berichten über alles, was in der Welt passiert. Und dürfen sich davon nicht überrollen lassen. Sonst könnten sie ihren Job nicht machen.\nWie sich Journalist*innen, insbesondere im öffentlich-rechtlichen Rundfunk, äußern dürfen, wird immer wieder angegriffen. Aktuell beispielsweise in Bayern mit Reformplänen für ein neues Rundfunkgesetz. Das will unter anderem im Prinzip eine “Informationsquote” fürs Fernsehen vorschreiben. Aber auch die Zivilgesellschaft soll sich möglichst nicht “politisch” äußern – das Demokratieförderprogramm soll gerade unter Leitung von Ministerin Karin Prien “in die Mitte” gerückt werden. Hier gut erklärt in einem Artikel der Zeit. Was bleibt: Alleine die permanente Unterstellung, dass Institutionen, die sich für ein vielfältiges und friedliches Miteinander einsetzen, “links” sind, verunsichert.\nUmso wichtiger ist gute Arbeit – und erklären, was gute Arbeit ist. Im Kontext von Daten heißt das:\n\n\n\n\n\n\nHinweisLeitlinien\n\n\n\nEs gibt viele allgemein akzeptierte Regeln für zuverlässige Recherche. Hier sind ein paar:\n\nBemühe dich, alle relevanten Quellen zu finden.\nLasse keine Quelle unter den Tisch fallen, nur weil sie etwas anderes behauptet, als du dir erhofft hast.\nMache deinen Quellen transparent.\nZitiere korrekt und ohne Aussagen aus dem Kontext zu reißen.\nFormuliere deine Erkenntnisse so deutlich und konkret wie möglich.\nWeise ehrlich darauf hin, was du nicht herausfinden konntest.\nLasse einen unabhängigen Experten über deine Arbeit schauen, bevor du sie publizierst.\n\n(vgl. Sengers und Hunter 2018, 20f)",
+    "crumbs": [
+      "01 Tools"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-22_tools.html#wie-plane-ich-ein-datenprojekt",
+    "href": "session_notes/2026-10-22_tools.html#wie-plane-ich-ein-datenprojekt",
+    "title": "01 Tools",
+    "section": "Wie plane ich ein Datenprojekt?",
+    "text": "Wie plane ich ein Datenprojekt?\n\n\n\n\n\n\nBeispielablauf\n\nIdee: Irgendjemand hat eine Idee…\nDatenrecherche: Welche Daten gibt es?\nQuellenkritik: Was können die Daten sagen, was nicht?\nHypothesen finden: “Drehbuch der Recherche”\nDaten analysieren: Hypothesen prüfen\nDaten einordnen lassen: Expert*innen suchen, Interviews und Hintergrundgespräche führen\nVeröffentlichung planen: Grafiken entwerfen, texten\nErgebnisse verifizieren: mindestens 4-Augen-Check",
+    "crumbs": [
+      "01 Tools"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-22_tools.html#übung-hundebiss-statistik-berlin-2024",
+    "href": "session_notes/2026-10-22_tools.html#übung-hundebiss-statistik-berlin-2024",
+    "title": "01 Tools",
+    "section": "🏋 Übung: Hundebiss-Statistik Berlin 2024",
+    "text": "🏋 Übung: Hundebiss-Statistik Berlin 2024\n\n\n\n\n\n“Gestern hat ein Hund einen Menschen schwer verletzt. Passiert sowas eigentlich öfter?”\n\n1. 🔍 Datenrecherche: Welche Daten gibt es?\n\n\nSuchtipps anzeigen\n\n\nSuchmaschine → Website Berlin\ngovdata.de → Datensatz zum Download\n\n\n\nWir mögen CSV-Dateien\n\ngrößter Vorteil: klein\nsehr schlicht, können eigentlich alle Programme öffnen\nNachteil: speichern keinen Kontext\n\n\n\n\n2. 📐 Quellenkritik: Was können die Daten sagen, was nicht?\n\nWas sind die aktuellsten verfügbaren Daten – in welchen Zyklen werden frische Daten veröffentlicht?\nKönnte es ein, dass bis zur geplanten Veröffentlichung aktualisierte Daten bereitstehen?\nWie zuverlässig sind die Daten – kommen sie möglichst direkt von der Erhebungsstelle?\nWas wissen wir über die Daten – gibt es Kontext-Informationen?\n\n\n\n3. 🤔 Hypothesen finden: “Drehbuch der Recherche”\n\nWelche Hunde haben die meisten Menschen verletzt?\nWelche Hunde haben im Verhältnis zu allen Menschen, die sie verletzt haben, die meisten Menschen schwer verletzt?\nWelche Hunde, die nicht als gefährlich gelten, haben mehr Menschen verletzt, als solche, die als gefährlich gelten?\n\n\n\n4. 🛠 Daten analysieren: Hypothesen prüfen\n\nHier: Summen bilden, Anteile ausrechnen\n\n\n\n5. 💬 Daten einordnen lassen: Interviews & Hintergrund\n\nGibt es einen Kontakt zur datenveröffentlichenden Stelle – wer ist fachlich zuständig?\nWelche Expert*innen beschäftigen sich noch mit den Daten und können in einem Hintergrundgespräch die Methodik einordnen?\n\n\n\n6. ✍️ Veröffentlichung planen: Grafiken entwerfen, texten\n\nWas ist interessant?\nDie richtige Grafik zur Aussage finden: \n\n🔗 The Visual Vocabulary, developed and published by Financial Times (FT)\n🔗 Datawrapper: “A friendly guide to choosing a chart type”\n🔗 Storytelling with Data: “SWD Chart Guide”\n\nEmpfehlung für Visualisierungen: Datawrapper\n\n\n\n7. 👀 Ergebnisse verifizieren: mindestens 4-Augen-Check\n\nAussagen auf Plausibilität prüfen\ndokumentierte Schritte nachvollziehen\n\n\n\n\n\n\n\nWarnungWie lange dauert’s denn nun?\n\n\n\nInoffizielle Faustregel 😉: Doppelt so lange, wie du denkst + 1 Tag.",
+    "crumbs": [
+      "01 Tools"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-22_tools.html#datenquellen",
+    "href": "session_notes/2026-10-22_tools.html#datenquellen",
+    "title": "01 Tools",
+    "section": "Datenquellen",
+    "text": "Datenquellen\n\n\n\n\n\n\nStatistisches Bundesamt\nStatistische Landesämter\ngovdata.de – Daten von Behörden, Kommunen, etc.\nDrucksachen Bundestag\nGoogle Dataset Search\n\n\nWelche Daten dürfen wir benutzen?\n“Open Data” ist ein feststehender Begriff seit vielen Jahren. In Deutschland gibt es dafür verschiedenste Regelungen, aber keine umfassende Verpflichtung, dass öffentliche Einrichtungen offene Daten verfügbar machen müssen. Dabei bedeutet das, dass man Daten frei nutzen kann, ohne weitere Einschränkungen:\n\n“Open means anyone can freely access, use, modify, and share for any purpose (subject, at most, to requirements that preserve provenance and openness).”\nhttps://opendefinition.org/\n\nIn der Praxis ist das in Deutschland oft anders umgesetzt und die datenveröffentlichende Stelle verlangt ihre Nennung. Das regelt die jeweilige Lizenz:\n\n“Gemeinfreiheit” CCO\nCC BY 4.0\n“Datenlizenz Deutschland” BY, Zero\n\ngovdata.de rät zu CC-Lizenzen",
+    "crumbs": [
+      "01 Tools"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-22_tools.html#übung-hundebiss-statistik-rheinland-pfalz-2024",
+    "href": "session_notes/2026-10-22_tools.html#übung-hundebiss-statistik-rheinland-pfalz-2024",
+    "title": "01 Tools",
+    "section": "🏋 Übung: Hundebiss-Statistik Rheinland-Pfalz 2024",
+    "text": "🏋 Übung: Hundebiss-Statistik Rheinland-Pfalz 2024\n\n\nSuchtipps anzeigen\n\n\nGoogle-Suche: “innenministerium rheinland pfalz hund filetype:pdf 2024”\n🔗\n\n\n\n\nBeispiel-Bericht anzeigen\n\n“Zahl der Verletzten durch Hundebisse in Berlin zurückgegangen” rbb24.de",
+    "crumbs": [
+      "01 Tools"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-22_tools.html#tools-um-tabellen-aus-pdfs-zu-extrahieren",
+    "href": "session_notes/2026-10-22_tools.html#tools-um-tabellen-aus-pdfs-zu-extrahieren",
+    "title": "01 Tools",
+    "section": "Tools, um Tabellen aus PDFs zu extrahieren",
+    "text": "Tools, um Tabellen aus PDFs zu extrahieren\n\ntabula Download oder gehostet (öffentlich!!)\nmit der Programmiersprache Python: camelot / excalibur\nfür komplexere Dokumente, Python-Kenntnisse nötig: docling",
+    "crumbs": [
+      "01 Tools"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-22_tools.html#wie-finde-ich-tools",
+    "href": "session_notes/2026-10-22_tools.html#wie-finde-ich-tools",
+    "title": "01 Tools",
+    "section": "Wie finde ich Tools?",
+    "text": "Wie finde ich Tools?\n\nalternativeto.net: Einstellungen: “Open Source” + eigenes Betriebssystem\ngithub.com: Code-Plattform (gehört Microsoft), die kuratierte “awesome”-Listen hat, z.B. https://github.com/topics/awesome-list\nabgucken bei anderen:\n\nDeutsche Welle Datenteam,\nBayerische Digitalagentur Byte Bayern\n30DayMapChallenge, 30DayChartChallenge",
+    "crumbs": [
+      "01 Tools"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-22_tools.html#übung-hundebiss-statistik-berlin-über-die-jahre",
+    "href": "session_notes/2026-10-22_tools.html#übung-hundebiss-statistik-berlin-über-die-jahre",
+    "title": "01 Tools",
+    "section": "🏋 Übung: Hundebiss-Statistik Berlin über die Jahre",
+    "text": "🏋 Übung: Hundebiss-Statistik Berlin über die Jahre\n\n\n\n\n\nWir erinnern uns: Auf govdata.de gab es Datensätze bis 2016 zurück…\nHerausforderungen: - wir müssen die alle runterladen (= scraping) - idealerweise brauchen wir das in einer Datei (= coding)\n\nSchritt 1: Links zu csv-Dateien sammeln\n\nBrowser öffnen + Developer-Tools ausklappen (Win/Linux: Ctrl + Shift + I or F12; macOS: Cmd + Opt + I)\nGanz links in der Ecke auf das Icon mit Rechteck und Cursor klicken (Win/Linux: Ctrl + Shift + C; macOS: Cmd + Opt + C)\njetzt zu einem csv-Button navigieren und anklicken\n\n\n\nSchritt 3: R installieren\nR-Download\n\n\nSchritt 4: RStudio installieren\nRStudio-Download\n\n\nSchritt 5: R-Projekt anlegen\nEmpfehlung für eine Ordnerstruktur:\n├── code\n├── data\n│   ├── raw\n│   ├── helpers\n│   ├── processed\n│   └── final\n└── report\n    ├── img\n    └── docs\nanlegen:\n\nAnwendung “Terminal” suchen → öffnen\nein paar Befehle ausprobieren:\n\n\nls -l listet alle Ordner und Dateien auf, mit ein paar Metadaten\ncd /hier/ein/pfad/zum/ordner springt zu einem Ordner\npwd zeigt an, in welchem Ordner man sich gerade befindet\nalle Ordner wie oben anlegen: 🪄\n\nmkdir -p code data/raw data/helpers data/processed data/final report/img report/docs\n\n\nSchritt 6: Code kopieren, ausführen, glücklich werden\n\n\nCode anzeigen\n\n\n# load libraries\nlibrary(stringr)\n\n# read html\nhtml &lt;- read_html(\"https://www.govdata.de/suche/daten/hundebiss-statistik-berlin\")\n\n# extract all links\nlinks &lt;- html |&gt; \n  html_elements(\"a\") |&gt; \n  html_attr(\"href\")\n\n# filter links if they end with \".csv\"\ncsv_links &lt;- links[str_detect(links, \".csv$\")]\n\n# download all csv files\nfor (u in csv_links) {\n  download.file(u, file.path(here::here(\"data/raw\"), basename(u)))\n}",
+    "crumbs": [
+      "01 Tools"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-22_tools.html#langeweile",
+    "href": "session_notes/2026-10-22_tools.html#langeweile",
+    "title": "01 Tools",
+    "section": "Langeweile?",
+    "text": "Langeweile?\n\nWeiterlesen / -hören\n\nStorytelling:\n\nSven Preger (2024): “Geschichten erzählen : Storytelling für Radio und Podcast”\nBR kontrovers (2025): “Bauen im Überschwemmungsgebiet, Unterwegs mit der Dorfpolizei und mehr”\n\nDatenjournalismus:\n\nChristina Elmer, Lorenz Matzat (Hrsg.): “Handbuch Daten und KI im Journalismus”\n\nJournalismus allgemein:\n\nGabriele Hooffacker, Klaus Meier (2026): “La Roches Einführung in den praktischen Journalismus”\nMaria Ressa (2022): “How to stand up to a dictator”\nPodcast: Anja Reschke im Hotel Matze (2025): “Welche Aufgabe hat der Journalismus”\n\n\n\n\nAusprobieren\n\nimmer nett: Was waren die häufigsten Vornamen, z.B. in Rostock oder Berlin",
+    "crumbs": [
+      "01 Tools"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Über das Seminar",
+    "section": "",
+    "text": "Seminar an der UdK Berlin",
+    "crumbs": [
+      "Über das Seminar"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "",
+    "section": "",
+    "text": "References"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Seminarübersicht",
+    "section": "",
+    "text": "HinweisWorum es geht\n\n\n\nGesellschaftlich relevante Geschichten in Daten finden und verständlich erzählen – das ist die Kernaufgabe des Datenjournalismus. Was dabei “Daten” sind, ist im 21. Jahrhundert breit gefasst: Von Informationen im Web über digitale Alltagsdokumente wie PDFs, JPGs oder Word-Dateien. Der Kurs schafft technische und methodische Grundlagen, um zielgerichtet datenjournalistische Geschichten zu entwickeln und Daten mit passenden Tools auszuwerten, vom Browser bis zum eigenen Code. (Keine Vorkenntnisse nötig, Interesse ist die einzige Voraussetzung.)",
+    "crumbs": [
+      "Seminarübersicht"
+    ]
+  },
+  {
+    "objectID": "index.html#geschichten-in-daten-finden-und-erzählen",
+    "href": "index.html#geschichten-in-daten-finden-und-erzählen",
+    "title": "Seminarübersicht",
+    "section": "",
+    "text": "HinweisWorum es geht\n\n\n\nGesellschaftlich relevante Geschichten in Daten finden und verständlich erzählen – das ist die Kernaufgabe des Datenjournalismus. Was dabei “Daten” sind, ist im 21. Jahrhundert breit gefasst: Von Informationen im Web über digitale Alltagsdokumente wie PDFs, JPGs oder Word-Dateien. Der Kurs schafft technische und methodische Grundlagen, um zielgerichtet datenjournalistische Geschichten zu entwickeln und Daten mit passenden Tools auszuwerten, vom Browser bis zum eigenen Code. (Keine Vorkenntnisse nötig, Interesse ist die einzige Voraussetzung.)",
+    "crumbs": [
+      "Seminarübersicht"
+    ]
+  },
+  {
+    "objectID": "index.html#was-ihr-am-ende-könnt",
+    "href": "index.html#was-ihr-am-ende-könnt",
+    "title": "Seminarübersicht",
+    "section": "Was ihr am Ende könnt",
+    "text": "Was ihr am Ende könnt\n\nDatenjournalistische Fragestellungen entwickeln und Umsetzung planen\nSpickzettel benutzen und Hilfe suchen\nDaten verarbeiten: Input – Blackbox-Gerödel* – Output (visualisierungsfertig)\nbesser mit eurem Computer und dem Internet umgehen\n\n* dafür lernen wir einen ganzen Haufen Tools und Techniken kennen",
+    "crumbs": [
+      "Seminarübersicht"
+    ]
+  },
+  {
+    "objectID": "index.html#orientierung",
+    "href": "index.html#orientierung",
+    "title": "Seminarübersicht",
+    "section": "Orientierung",
+    "text": "Orientierung\n\n\n\nDiese Dokumente\nSemesterplan\nDaten\n\n\n\n\nx\nx\nx",
+    "crumbs": [
+      "Seminarübersicht"
+    ]
+  },
+  {
+    "objectID": "index.html#über-dieses-material",
+    "href": "index.html#über-dieses-material",
+    "title": "Seminarübersicht",
+    "section": "Über dieses Material",
+    "text": "Über dieses Material\nDieses Seminarmaterial wurde gebaut mit Quarto, für die Webansicht mit dem Theme “Yeti”. Die Grafiken kommen von undraw.com und dürfen von allen für alles frei verwendet werden. Vielen Dank dafür!\nUnd als Notizzettel: Die Fokus-Farbe ist #006080.",
+    "crumbs": [
+      "Seminarübersicht"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-11-26_geodata.html",
+    "href": "session_notes/2026-11-26_geodata.html",
+    "title": "06 Geodata",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "06 Geodata"
+    ]
+  },
+  {
+    "objectID": "session_notes/2027-01-21_conference.html",
+    "href": "session_notes/2027-01-21_conference.html",
+    "title": "12 Conference",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "12 Conference"
+    ]
+  },
+  {
+    "objectID": "session_notes/2027-01-14_database.html",
+    "href": "session_notes/2027-01-14_database.html",
+    "title": "11 Database",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "11 Database"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-29_data.html",
+    "href": "session_notes/2026-10-29_data.html",
+    "title": "02 Daten",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "02 Daten"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-15_intro.html",
+    "href": "session_notes/2026-10-15_intro.html",
+    "title": "00 Einführung",
+    "section": "",
+    "text": "Wir lernen mit vielen praktischen Übungen und kompaktem theoretischem Input, wie man Geschichten in Daten findet. Dazu lernen wir unsere Rechner und das Internet besser kennen. Insbesondere schauen wir uns an, wie und wo man Daten findet, wie man eigene Datensätze erstellt und wie man Erkenntnisse aus Daten kommuniziert.\nWichtig: Wir versuchen uns auch an Visualisierungen. Weil es dazu aber viele andere Kurse gibt, konzentrieren wir uns darauf, die richtige Visualisierung auszuwählen und zu lernen, wie wir Daten dafür strukturieren.\n\n\n\n\n\n🌍 Das Wissen ist da – ich helfe euch dabei, es zu verstehen und anwenden zu können.\n🪑 Die Idee: Wir nutzen die Zeit im Seminarraum möglichst gut, damit ihr rausgeht und die Grundlagen sicher beherrscht.\n🚀 Wer mehr will: Ich empfehle euch Ressourcen und Material, um noch tiefer einzusteigen."
+  },
+  {
+    "objectID": "session_notes/2026-10-15_intro.html#was-machen-wir-in-diesem-seminar",
+    "href": "session_notes/2026-10-15_intro.html#was-machen-wir-in-diesem-seminar",
+    "title": "00 Einführung",
+    "section": "",
+    "text": "Wir lernen mit vielen praktischen Übungen und kompaktem theoretischem Input, wie man Geschichten in Daten findet. Dazu lernen wir unsere Rechner und das Internet besser kennen. Insbesondere schauen wir uns an, wie und wo man Daten findet, wie man eigene Datensätze erstellt und wie man Erkenntnisse aus Daten kommuniziert.\nWichtig: Wir versuchen uns auch an Visualisierungen. Weil es dazu aber viele andere Kurse gibt, konzentrieren wir uns darauf, die richtige Visualisierung auszuwählen und zu lernen, wie wir Daten dafür strukturieren.\n\n\n\n\n\n🌍 Das Wissen ist da – ich helfe euch dabei, es zu verstehen und anwenden zu können.\n🪑 Die Idee: Wir nutzen die Zeit im Seminarraum möglichst gut, damit ihr rausgeht und die Grundlagen sicher beherrscht.\n🚀 Wer mehr will: Ich empfehle euch Ressourcen und Material, um noch tiefer einzusteigen."
+  },
+  {
+    "objectID": "session_notes/2026-10-15_intro.html#semesterplan",
+    "href": "session_notes/2026-10-15_intro.html#semesterplan",
+    "title": "00 Einführung",
+    "section": "Semesterplan",
+    "text": "Semesterplan\n\n\n\nDatum\nThema\nLink\n\n\n\n\n15.10.2026\nEinführung\nKapitel\n\n\n22.10.2026\nWorkflow & Werkzeuge\nKapitel\n\n\n29.10.2026\nIch habe Daten, was jetzt?\nKapitel\n\n\n05.11.2026\nIch habe eine Frage, aber keine Daten – was jetzt?\nKapitel\n\n\n12.11.2026\nWie funktionieren Terminal & Server\nKapitel\n\n\n19.11.2026\nRaum für eigene Ideen\nKapitel\n\n\n26.11.2026\nArbeit mit Kartendaten\nKapitel\n\n\n03.12.2026\nElemente des Storytelling\nKapitel\n\n\n10.12.2026\nBild und Text, Audio und Video als Datenquelle\nKapitel\n\n\n17.12.2026\nEigene Ideen umsetzen\nKapitel\n\n\n07.01.2027\nTexten in und um Grafiken herum\nKapitel\n\n\n14.01.2027\nWie funktionieren Datenbanken\nKapitel\n\n\n21.01.2027\nNIAM\nKapitel\n\n\n28.01.2027\ntba\nKapitel\n\n\n04.02.2027\ntba\nKapitel\n\n\n11.02.2027\ntba\nKapitel"
+  },
+  {
+    "objectID": "session_notes/2026-10-15_intro.html#eckpunkte-erwartungen",
+    "href": "session_notes/2026-10-15_intro.html#eckpunkte-erwartungen",
+    "title": "00 Einführung",
+    "section": "Eckpunkte – Erwartungen",
+    "text": "Eckpunkte – Erwartungen\nIn der Einführungssitzung haben wir darüber gesprochen, was ihr euch wünscht – daran werde ich das Angebot ausrichten."
+  },
+  {
+    "objectID": "session_notes/2026-12-10_multimedia.html",
+    "href": "session_notes/2026-12-10_multimedia.html",
+    "title": "08 Multimedia",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "08 Multimedia"
+    ]
+  }
+]

@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>01 Tools – Geschichten in Daten – UdK-Seminar (Winter 2026/27)</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../session_notes/2026-10-14_intro.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a2acb6f4ed5aeb23a104ba421924b87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ae7dadc3ff9e5b20376e0c97e2c028ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-628b5248ccc7b09112749bda28de0827.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ae7dadc3ff9e5b20376e0c97e2c028ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Geschichten in Daten – UdK-Seminar (Winter 2026/27)</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Suchen"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navigation umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../about.html" aria-current="page"> 
+<span class="menu-text">Über das Seminar</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.ekotov.pro/2025-EDSD-open-science-quarto-github/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../session_notes/2026-10-22_tools.html">01 Tools</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+        <div class="sidebar-tools-collapse">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-collapse-item" href="https://code.com">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-collapse-item" href="https://bugs.com">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Über das Seminar</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Seminarübersicht</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session_notes/2026-10-14_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">00 Einführung</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session_notes/2026-10-22_tools.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">01 Tools</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhalt</h2>
+   
+  <ul>
+  <li><a href="#beispiel-wie-europa-seinen-solarboom-finanziert" id="toc-beispiel-wie-europa-seinen-solarboom-finanziert" class="nav-link active" data-scroll-target="#beispiel-wie-europa-seinen-solarboom-finanziert">Beispiel: “Wie Europa seinen Solarboom finanziert”</a></li>
+  <li><a href="#storytelling-die-grundlagen" id="toc-storytelling-die-grundlagen" class="nav-link" data-scroll-target="#storytelling-die-grundlagen">Storytelling – Die Grundlagen</a>
+  <ul class="collapse">
+  <li><a href="#was-ist-eine-geschichte" id="toc-was-ist-eine-geschichte" class="nav-link" data-scroll-target="#was-ist-eine-geschichte">1. Was ist eine Geschichte?</a></li>
+  <li><a href="#was-ist-eine-nachricht" id="toc-was-ist-eine-nachricht" class="nav-link" data-scroll-target="#was-ist-eine-nachricht">2. Was ist eine Nachricht?</a></li>
+  </ul></li>
+  <li><a href="#grundprinzipien-der-datenarbeit" id="toc-grundprinzipien-der-datenarbeit" class="nav-link" data-scroll-target="#grundprinzipien-der-datenarbeit">Grundprinzipien der Datenarbeit</a>
+  <ul class="collapse">
+  <li><a href="#das-ding-mit-der-objektivität" id="toc-das-ding-mit-der-objektivität" class="nav-link" data-scroll-target="#das-ding-mit-der-objektivität">Das Ding mit der Objektivität…</a></li>
+  </ul></li>
+  <li><a href="#wie-plane-ich-ein-datenprojekt" id="toc-wie-plane-ich-ein-datenprojekt" class="nav-link" data-scroll-target="#wie-plane-ich-ein-datenprojekt">Wie plane ich ein Datenprojekt?</a>
+  <ul class="collapse">
+  <li><a href="#beispielablauf" id="toc-beispielablauf" class="nav-link" data-scroll-target="#beispielablauf">Beispielablauf</a></li>
+  </ul></li>
+  <li><a href="#übung-hundebiss-statistik-berlin-2024" id="toc-übung-hundebiss-statistik-berlin-2024" class="nav-link" data-scroll-target="#übung-hundebiss-statistik-berlin-2024">🏋 Übung: Hundebiss-Statistik Berlin 2024</a>
+  <ul class="collapse">
+  <li><a href="#datenrecherche-welche-daten-gibt-es" id="toc-datenrecherche-welche-daten-gibt-es" class="nav-link" data-scroll-target="#datenrecherche-welche-daten-gibt-es">1. 🔍 <strong>Datenrecherche</strong>: Welche Daten gibt es?</a></li>
+  <li><a href="#quellenkritik-was-können-die-daten-sagen-was-nicht" id="toc-quellenkritik-was-können-die-daten-sagen-was-nicht" class="nav-link" data-scroll-target="#quellenkritik-was-können-die-daten-sagen-was-nicht">2. 📐 <strong>Quellenkritik</strong>: Was können die Daten sagen, was nicht?</a></li>
+  <li><a href="#hypothesen-finden-drehbuch-der-recherche" id="toc-hypothesen-finden-drehbuch-der-recherche" class="nav-link" data-scroll-target="#hypothesen-finden-drehbuch-der-recherche">3. 🤔 <strong>Hypothesen finden</strong>: “Drehbuch der Recherche”</a></li>
+  <li><a href="#daten-analysieren-hypothesen-prüfen" id="toc-daten-analysieren-hypothesen-prüfen" class="nav-link" data-scroll-target="#daten-analysieren-hypothesen-prüfen">4. 🛠 <strong>Daten analysieren</strong>: Hypothesen prüfen</a></li>
+  <li><a href="#daten-einordnen-lassen-interviews-hintergrund" id="toc-daten-einordnen-lassen-interviews-hintergrund" class="nav-link" data-scroll-target="#daten-einordnen-lassen-interviews-hintergrund">5. 💬 <strong>Daten einordnen lassen</strong>: Interviews &amp; Hintergrund</a></li>
+  <li><a href="#veröffentlichung-planen-grafiken-entwerfen-texten" id="toc-veröffentlichung-planen-grafiken-entwerfen-texten" class="nav-link" data-scroll-target="#veröffentlichung-planen-grafiken-entwerfen-texten">6. ✍️ <strong>Veröffentlichung planen</strong>: Grafiken entwerfen, texten</a></li>
+  <li><a href="#ergebnisse-verifizieren-mindestens-4-augen-check" id="toc-ergebnisse-verifizieren-mindestens-4-augen-check" class="nav-link" data-scroll-target="#ergebnisse-verifizieren-mindestens-4-augen-check">7. 👀 <strong>Ergebnisse verifizieren</strong>: mindestens 4-Augen-Check</a></li>
+  </ul></li>
+  <li><a href="#datenquellen" id="toc-datenquellen" class="nav-link" data-scroll-target="#datenquellen">Datenquellen</a>
+  <ul class="collapse">
+  <li><a href="#welche-daten-dürfen-wir-benutzen" id="toc-welche-daten-dürfen-wir-benutzen" class="nav-link" data-scroll-target="#welche-daten-dürfen-wir-benutzen">Welche Daten dürfen wir benutzen?</a></li>
+  </ul></li>
+  <li><a href="#übung-hundebiss-statistik-rheinland-pfalz-2024" id="toc-übung-hundebiss-statistik-rheinland-pfalz-2024" class="nav-link" data-scroll-target="#übung-hundebiss-statistik-rheinland-pfalz-2024">🏋 Übung: Hundebiss-Statistik Rheinland-Pfalz 2024</a></li>
+  <li><a href="#tools-um-tabellen-aus-pdfs-zu-extrahieren" id="toc-tools-um-tabellen-aus-pdfs-zu-extrahieren" class="nav-link" data-scroll-target="#tools-um-tabellen-aus-pdfs-zu-extrahieren">Tools, um Tabellen aus PDFs zu extrahieren</a></li>
+  <li><a href="#wie-finde-ich-tools" id="toc-wie-finde-ich-tools" class="nav-link" data-scroll-target="#wie-finde-ich-tools">Wie finde ich Tools?</a></li>
+  <li><a href="#übung-hundebiss-statistik-berlin-über-die-jahre" id="toc-übung-hundebiss-statistik-berlin-über-die-jahre" class="nav-link" data-scroll-target="#übung-hundebiss-statistik-berlin-über-die-jahre">🏋 Übung: Hundebiss-Statistik Berlin über die Jahre</a>
+  <ul class="collapse">
+  <li><a href="#schritt-1-links-zu-csv-dateien-sammeln" id="toc-schritt-1-links-zu-csv-dateien-sammeln" class="nav-link" data-scroll-target="#schritt-1-links-zu-csv-dateien-sammeln">Schritt 1: Links zu csv-Dateien sammeln</a></li>
+  <li><a href="#schritt-3-r-installieren" id="toc-schritt-3-r-installieren" class="nav-link" data-scroll-target="#schritt-3-r-installieren">Schritt 3: R installieren</a></li>
+  <li><a href="#schritt-4-rstudio-installieren" id="toc-schritt-4-rstudio-installieren" class="nav-link" data-scroll-target="#schritt-4-rstudio-installieren">Schritt 4: RStudio installieren</a></li>
+  <li><a href="#schritt-5-r-projekt-anlegen" id="toc-schritt-5-r-projekt-anlegen" class="nav-link" data-scroll-target="#schritt-5-r-projekt-anlegen">Schritt 5: R-Projekt anlegen</a></li>
+  <li><a href="#schritt-6-code-kopieren-ausführen-glücklich-werden" id="toc-schritt-6-code-kopieren-ausführen-glücklich-werden" class="nav-link" data-scroll-target="#schritt-6-code-kopieren-ausführen-glücklich-werden">Schritt 6: Code kopieren, ausführen, glücklich werden</a></li>
+  </ul></li>
+  <li><a href="#langeweile" id="toc-langeweile" class="nav-link" data-scroll-target="#langeweile">Langeweile?</a>
+  <ul class="collapse">
+  <li><a href="#weiterlesen--hören" id="toc-weiterlesen--hören" class="nav-link" data-scroll-target="#weiterlesen--hören">Weiterlesen / -hören</a></li>
+  <li><a href="#ausprobieren" id="toc-ausprobieren" class="nav-link" data-scroll-target="#ausprobieren">Ausprobieren</a></li>
+  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#data-example" id="toc-data-example" class="nav-link" data-scroll-target="#data-example">Data Example</a></li>
+  <li><a href="#appearing-elements" id="toc-appearing-elements" class="nav-link" data-scroll-target="#appearing-elements">Appearing Elements</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Andere Formate</h2><ul><li><a href="2026-10-22_tools.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">01 Tools</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+  <div class="quarto-categories">
+    <div class="quarto-category">erwartungen</div>
+    <div class="quarto-category">storytelling</div>
+    <div class="quarto-category">journalismus</div>
+    <div class="quarto-category">ethik</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">22. Oktober 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Worum es heute geht
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Theorie</strong>:
+<ul>
+<li>Grundprinzipien der Datenarbeit (Zeit- und Projektplanung)</li>
+<li>Datenquellen, Lizenzen &amp; Open Data</li>
+</ul></li>
+<li><strong>Praxis</strong>:
+<ul>
+<li>Tabellarische Dateiformate in Tabellenkalkulation laden und aufbereiten</li>
+<li>Fragen an einen Datensatz entwickeln</li>
+<li>Tabelle aus PDF extrahieren</li>
+</ul></li>
+<li><strong>Technik</strong>:
+<ul>
+<li>Dateiformate: csv, Tabellen in PDF</li>
+<li>Tools: LibreOffice, Datawrapper, Tabula, Developertools</li>
+</ul></li>
+<li><strong>Daten</strong>:
+<ul>
+<li>Hundebiss-Statistik Berlin &amp; Rheinland-Pfalz</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<hr>
+<section id="beispiel-wie-europa-seinen-solarboom-finanziert" class="level2">
+<h2 class="anchored" data-anchor-id="beispiel-wie-europa-seinen-solarboom-finanziert">Beispiel: “Wie Europa seinen Solarboom finanziert”</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/undraw_best-place_dhzp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../img/undraw_best-place_dhzp.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></a></p>
+</figure>
+</div>
+<p><em>von Kira Schacht / Deutsche Welle</em> <a href="https://www.dw.com/de/solarausbau-in-europ%C3%A4ischen-l%C3%A4ndern-photovoltaik-subventionen-f%C3%B6rderung-hausdach-balkon-eigenheim/a-71676260">🔗 Deutsch</a> <a href="https://www.dw.com/en/how-europe-is-paying-for-its-solar-boom/a-71640144">🔗 English</a></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Fragen zum Lesen:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Was gefällt dir (nicht)? Warum?</li>
+<li>Was interessiert dich? Was langweilt dich?</li>
+<li>Wenn du fertig bist: Was ist hängen geblieben?</li>
+</ol>
+</div>
+</div>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/undraw_reading_6jjr.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="../img/undraw_reading_6jjr.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></a></p>
+</figure>
+</div>
+</section>
+<section id="storytelling-die-grundlagen" class="level2">
+<h2 class="anchored" data-anchor-id="storytelling-die-grundlagen">Storytelling – Die Grundlagen</h2>
+<section id="was-ist-eine-geschichte" class="level3">
+<h3 class="anchored" data-anchor-id="was-ist-eine-geschichte">1. Was ist eine Geschichte?</h3>
+<p>Gute Frage, hierzu könnte man ein eigenes Studium machen. Oder man nimmt die Abkürzung und liest ein Buch wie beispielsweise “Storytelling” von Sven Preger, der vor allem Audio-Geschichten erzählt, z.B. für den Deutschlandfunk oder den WDR. Darin steht:</p>
+<p><strong>“Eine Geschichte besteht in aller Regel aus drei Basis-Elementen: eine aktiv-handelnde Person, ein konkretes Ziel und (etliche) Widerstände.</strong></p>
+<p>Es gibt viele Möglichkeiten, diese Basis-Elemente zu strukturieren. In der Erzähltheorie gibt es verschiedene Modelle, wie Handlungen strukturiert sein können. Ganz klassisch, wie in den Dramen von Goethe und Schiller lernt man in der Schule oft den Aufbau, der sich bis auf Sophokles im antiken Griechenland zurückführen lässt: auslösendes Moment im ersten Akt, Zuspitzung des Konflikts im zweiten Akt, Herausforderung im dritten, Höhepunkt im vierten und dann die Auflösung im fünften Akt. Hier eine Abbildung aus einem mehr oder weniger zufällig ausgewählten Lehrbuch <!--[@harzer2017, S. 197]:--></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/Screenshot_Literarische_Texte_Harzer2017_S_197.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="../img/Screenshot_Literarische_Texte_Harzer2017_S_197.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+<p>Insbesondere in der Filmindustrie ist mittlerweile aber auch das Konzept der “Heldenreise” verbreitet, hier dargestellt von Sven Preger in seinem Buch “Storytelling” (S. 74):</p>
+<p><a href="../img/Screenshot_Storytelling_Preger2024_S_74.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="../img/Screenshot_Storytelling_Preger2024_S_74.png" class="img-fluid"></a></p>
+<p>Das ist natürlich ganz schön detailliert und komplex. Um die eigene Geschichte zu strukturieren, schlägt Sven Preger deshalb, kurz und prägnant, einen Erzählsatz vor:</p>
+<blockquote class="blockquote">
+<p>“A (der Protagonist) will B (seine Absicht/sein Ziel), weil er C (die Motivation), stößt aber auf D (Hindernisse). Diese Hindernisse muss der Protagonist überwinden, oder es zumindest versuchen. Der Erzählsatz ist damit der Kompass, an dem sich die Geschichte ausrichtet.”</p>
+</blockquote>
+</section>
+<section id="was-ist-eine-nachricht" class="level3">
+<h3 class="anchored" data-anchor-id="was-ist-eine-nachricht">2. Was ist eine Nachricht?</h3>
+<p>Jetzt soll eine Geschichte ja in unserem Fall nicht fiktional sein, sondern vor allem Wissen vermitteln. Aber was ist überhaupt relevant, und damit vermittelnswert?</p>
+<p>Im Journalismus gibt es unterschiedliche Darstellungsformen. Grob unterteilt man in informierende und meinungsäußernde Formen. Informierend sind Nachrichten, Reportagen, Interviews oder Korrespondentenberichte. Meinungsäußernd ist zum Beispiel der Kommentar.</p>
+<p>Eine Nachricht sollte möglichst viele der sieben wichten Fragen beantworten – diese können wir verwenden, um Fragen an unsere Daten zu entwickeln:</p>
+<ul>
+<li><strong>Wer?</strong> <em>(Wer hat am meisten…? Wer hat am wenigsten…?)</em></li>
+<li><strong>Was?</strong> <em>(Was ist anders als vielleicht angenommen?)</em></li>
+<li><strong>Wo?</strong> <em>(Wo häufen sich die Ereignisse?)</em></li>
+<li><strong>Wann?</strong> <em>(Wann hat sich etwas verändert? Wie hat sich etwas entwickelt?)</em></li>
+<li><strong>Wie?</strong> <em>(Wie hängen x und y zusammen?)</em></li>
+<li>(<strong>Warum?</strong>)</li>
+<li><strong>Woher?</strong> <em>(Woher kommen die Daten? Wer hat sie mit welchem Interesse erhoben?)</em></li>
+</ul>
+<p>(siehe Einführung in den praktischen Journalismus)</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Praktische Probe, ob eine Nachricht relevant ist
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Der “Küchenzuruf”:</strong> Eine Zusammenfassung der zentralen Aussage in maximal zwei Sätzen. Der Begriff wurde vom Stern-Redakteur Henri Nannen geprägt und durch eine beispielhafte Situation erklärt, in der ein gewisser Hans im Esszimmer den ‚Stern‘ liest, während „Frau Grete“ in der Küche „sich die Schürze umbindet, um sich für den Abwasch vorzubereiten“. Nach „beendigter Lektüre“ ruft Hans seiner Grete in die Küche zu: „Mensch Grete, die in Bonn spinnen komplett! Die wollen schon wieder die Steuern erhöhen!“</p>
+<p>Das würde man heute hoffentlich anders erklären, aber das Prinzip bleibt das gleiche:</p>
+<p><strong>“Hey, hast du schon gehört? …!”</strong></p>
+</div>
+</div>
+</section>
+</section>
+<section id="grundprinzipien-der-datenarbeit" class="level2">
+<h2 class="anchored" data-anchor-id="grundprinzipien-der-datenarbeit">Grundprinzipien der Datenarbeit</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/undraw_personal-file_81l0.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="../img/undraw_personal-file_81l0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a></p>
+</figure>
+</div>
+<ol type="1">
+<li><strong>Wir verändern niemals Originaldaten.</strong></li>
+<li>Wir arbeiten möglichst <strong>nachvollziehbar</strong>, also möglichst nah am Original.</li>
+<li>Wir <strong>dokumentieren</strong> unsere Arbeitsschritte, um sie reproduzieren zu können.</li>
+</ol>
+<div style="color: #008cba">
+→ Wir rechnen also mit Fehlern und arbeiten so, dass wir sie finden und korrigieren können.
+</div>
+<section id="das-ding-mit-der-objektivität" class="level3">
+<h3 class="anchored" data-anchor-id="das-ding-mit-der-objektivität">Das Ding mit der Objektivität…</h3>
+<p>Die Vorstellung, Journalismus müsse “neutral” sein, ist weit verbreitet. Tatsächlich steht im <a href="https://www.gesetze-bayern.de/Content/Document/MStV/true">Medienstaatsvertrag</a> aber kein Wort von Neutralität in Bezug auf den Journalismus. Stattdessen sind die öffentlich-rechtlichen Medienanstalten verpflichtet zur “unabhängigen, sachlichen, wahrheitsgemäßen und umfassenden Information und Berichterstattung”. (Kann man nachlesen oder in sechs Minuten <a href="https://www.swr.de/swrkultur/wissen/muss-der-oeffentlich-rechtliche-rundfunk-neutral-sein-108.html">hier nachhören.</a>)</p>
+<p>Ein verbreitetes Zitat stammt von dem Fernseh-Journalisten Hanns Joachim Friedrichs: “Einen guten Journalisten erkennt man daran, dass er sich nicht gemein macht mit einer Sache, auch nicht mit einer guten Sache.” Das kann ohne Kontext aber leicht missverstanden werden und wird immer wieder diskutiert. Die beste Einordnung liefert ein Text von <a href="https://uebermedien.de/64851/mit-keiner-sache-gemein-die-wahrheit-ueber-das-hanns-joachim-friedrichs-zitat/">Uebermedien</a>. Der Kern: Journalist*innen müssen berichten über alles, was in der Welt passiert. Und dürfen sich davon nicht überrollen lassen. Sonst könnten sie ihren Job nicht machen.</p>
+<p>Wie sich Journalist*innen, insbesondere im öffentlich-rechtlichen Rundfunk, äußern dürfen, wird immer wieder angegriffen. Aktuell beispielsweise in Bayern mit <a href="https://www.br.de/nachrichten/bayern/reformplaene-fuer-br-geplantes-rundfunkgesetz-stoesst-auf-kritik,VHLgaym">Reformplänen für ein neues Rundfunkgesetz</a>. Das will unter anderem im Prinzip eine “Informationsquote” fürs Fernsehen vorschreiben. Aber auch die Zivilgesellschaft soll sich möglichst nicht “politisch” äußern – das Demokratieförderprogramm soll gerade unter Leitung von Ministerin Karin Prien “in die Mitte” gerückt werden. Hier gut erklärt in einem <a href="https://www.zeit.de/politik/deutschland/2026-04/demokratie-leben-programm-foerderung-karin-prien">Artikel der Zeit</a>. Was bleibt: Alleine die permanente Unterstellung, dass Institutionen, die sich für ein vielfältiges und friedliches Miteinander einsetzen, “links” sind, verunsichert.</p>
+<p>Umso wichtiger ist gute Arbeit – und erklären, was gute Arbeit ist. Im Kontext von Daten heißt das:</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Leitlinien
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Es gibt viele allgemein akzeptierte Regeln für zuverlässige Recherche. Hier sind ein paar:</p>
+<ul>
+<li>Bemühe dich, alle relevanten Quellen zu finden.</li>
+<li>Lasse keine Quelle unter den Tisch fallen, nur weil sie etwas anderes behauptet, als du dir erhofft hast.</li>
+<li>Mache deinen Quellen transparent.</li>
+<li>Zitiere korrekt und ohne Aussagen aus dem Kontext zu reißen.</li>
+<li>Formuliere deine Erkenntnisse so deutlich und konkret wie möglich.</li>
+<li>Weise ehrlich darauf hin, was du nicht herausfinden konntest.</li>
+<li>Lasse einen unabhängigen Experten über deine Arbeit schauen, bevor du sie publizierst.</li>
+</ul>
+<!--[vgl. @sengers2018, S. 20f]-->
+</div>
+</div>
+<!-- Denn ganz wichtig: Daten brauchen Kontext. Und der muss mitgedacht werden! Sonst wird es unangenehm, wie für Innenminister Alexander Dobrindt 2025 zum Verfassungsschutzbericht. Der Bericht von [T-Online](https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_100762108/linksextremismus-zahlen-dobrindt-fuer-verzerrte-darstellung-kritisiert.html) zeigt gut, wie zwei gleich aussehende Grafiken unterschiedliche Skalen hatten:
+![](https://../img.t-online.de/2025/06/3fbIzxVWGofr/0x0:3200x4000/fit-in/1366x0/image.jpg){width=40%}
+-->
+</section>
+</section>
+<section id="wie-plane-ich-ein-datenprojekt" class="level2">
+<h2 class="anchored" data-anchor-id="wie-plane-ich-ein-datenprojekt">Wie plane ich ein Datenprojekt?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/undraw_processing-thoughts_wakg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="../img/undraw_processing-thoughts_wakg.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<section id="beispielablauf" class="level3">
+<h3 class="anchored" data-anchor-id="beispielablauf">Beispielablauf</h3>
+<ol start="0" type="1">
+<li><strong>Idee:</strong> Irgendjemand hat eine Idee…</li>
+<li><strong>Datenrecherche</strong>: Welche Daten gibt es?</li>
+<li><strong>Quellenkritik</strong>: Was können die Daten sagen, was nicht?</li>
+<li><strong>Hypothesen finden</strong>: “Drehbuch der Recherche”</li>
+<li><strong>Daten analysieren</strong>: Hypothesen prüfen</li>
+<li><strong>Daten einordnen lassen</strong>: Expert*innen suchen, Interviews und Hintergrundgespräche führen</li>
+<li><strong>Veröffentlichung planen</strong>: Grafiken entwerfen, texten</li>
+<li><strong>Ergebnisse verifizieren</strong>: mindestens 4-Augen-Check</li>
+</ol>
+</section>
+</section>
+<section id="übung-hundebiss-statistik-berlin-2024" class="level2">
+<h2 class="anchored" data-anchor-id="übung-hundebiss-statistik-berlin-2024">🏋 Übung: Hundebiss-Statistik Berlin 2024</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/undraw_page-eaten_b2rt.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="../img/undraw_page-eaten_b2rt.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></a></p>
+</figure>
+</div>
+<p><strong>“Gestern hat ein Hund einen Menschen schwer verletzt. Passiert sowas eigentlich öfter?”</strong></p>
+<section id="datenrecherche-welche-daten-gibt-es" class="level3">
+<h3 class="anchored" data-anchor-id="datenrecherche-welche-daten-gibt-es">1. 🔍 <strong>Datenrecherche</strong>: Welche Daten gibt es?</h3>
+<details>
+<summary>
+Suchtipps anzeigen
+</summary>
+<ul>
+<li>Suchmaschine → <a href="https://www.berlin.de/sen/verbraucherschutz/aufgaben/hundehaltung/hundebiss-statistik/hundebiss-statistik-2024/">Website Berlin</a></li>
+<li>govdata.de → <a href="https://www.govdata.de/suche/daten/hundebiss-statistik-berlin">Datensatz zum Download</a></li>
+</ul>
+</details>
+<section id="wir-mögen-csv-dateien" class="level4">
+<h4 class="anchored" data-anchor-id="wir-mögen-csv-dateien">Wir mögen CSV-Dateien</h4>
+<ul>
+<li>größter Vorteil: klein</li>
+<li>sehr schlicht, können eigentlich alle Programme öffnen</li>
+<li>Nachteil: speichern keinen Kontext</li>
+</ul>
+</section>
+</section>
+<section id="quellenkritik-was-können-die-daten-sagen-was-nicht" class="level3">
+<h3 class="anchored" data-anchor-id="quellenkritik-was-können-die-daten-sagen-was-nicht">2. 📐 <strong>Quellenkritik</strong>: Was können die Daten sagen, was nicht?</h3>
+<ul>
+<li>Was sind die aktuellsten verfügbaren Daten – in welchen Zyklen werden frische Daten veröffentlicht?</li>
+<li>Könnte es ein, dass bis zur geplanten Veröffentlichung aktualisierte Daten bereitstehen?</li>
+<li>Wie zuverlässig sind die Daten – kommen sie möglichst direkt von der Erhebungsstelle?</li>
+<li>Was wissen wir über die Daten – gibt es Kontext-Informationen?</li>
+</ul>
+</section>
+<section id="hypothesen-finden-drehbuch-der-recherche" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesen-finden-drehbuch-der-recherche">3. 🤔 <strong>Hypothesen finden</strong>: “Drehbuch der Recherche”</h3>
+<ul>
+<li>Welche Hunde haben die meisten Menschen verletzt?</li>
+<li>Welche Hunde haben im Verhältnis zu allen Menschen, die sie verletzt haben, die meisten Menschen <em>schwer</em> verletzt?</li>
+<li>Welche Hunde, die nicht als gefährlich gelten, haben mehr Menschen verletzt, als solche, die als gefährlich gelten?</li>
+</ul>
+</section>
+<section id="daten-analysieren-hypothesen-prüfen" class="level3">
+<h3 class="anchored" data-anchor-id="daten-analysieren-hypothesen-prüfen">4. 🛠 <strong>Daten analysieren</strong>: Hypothesen prüfen</h3>
+<ul>
+<li>Hier: Summen bilden, Anteile ausrechnen</li>
+</ul>
+</section>
+<section id="daten-einordnen-lassen-interviews-hintergrund" class="level3">
+<h3 class="anchored" data-anchor-id="daten-einordnen-lassen-interviews-hintergrund">5. 💬 <strong>Daten einordnen lassen</strong>: Interviews &amp; Hintergrund</h3>
+<ul>
+<li>Gibt es einen Kontakt zur datenveröffentlichenden Stelle – wer ist fachlich zuständig?</li>
+<li>Welche Expert*innen beschäftigen sich noch mit den Daten und können in einem Hintergrundgespräch die Methodik einordnen?</li>
+</ul>
+</section>
+<section id="veröffentlichung-planen-grafiken-entwerfen-texten" class="level3">
+<h3 class="anchored" data-anchor-id="veröffentlichung-planen-grafiken-entwerfen-texten">6. ✍️ <strong>Veröffentlichung planen</strong>: Grafiken entwerfen, texten</h3>
+<ul>
+<li>Was ist interessant?</li>
+<li>Die richtige Grafik zur Aussage finden: <img src="../img/ft_visual_vocabulary.png" class="img-fluid">
+<ul>
+<li><a href="https://github.com/Financial-Times/chart-doctor/blob/main/visual-vocabulary/poster.png">🔗 <em>The</em> Visual Vocabulary, developed and published by Financial Times (FT)</a></li>
+<li><a href="https://www.datawrapper.de/blog/chart-types-guide">🔗 Datawrapper: “A friendly guide to choosing a chart type”</a></li>
+<li><a href="https://www.storytellingwithdata.com/chart-guide">🔗 Storytelling with Data: “SWD Chart Guide”</a></li>
+</ul></li>
+<li>Empfehlung für Visualisierungen: <a href="https://www.datawrapper.de/charts">Datawrapper</a></li>
+</ul>
+</section>
+<section id="ergebnisse-verifizieren-mindestens-4-augen-check" class="level3">
+<h3 class="anchored" data-anchor-id="ergebnisse-verifizieren-mindestens-4-augen-check">7. 👀 <strong>Ergebnisse verifizieren</strong>: mindestens 4-Augen-Check</h3>
+<ul>
+<li>Aussagen auf Plausibilität prüfen</li>
+<li>dokumentierte Schritte nachvollziehen</li>
+</ul>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warnung</span>Wie lange dauert’s denn nun?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Inoffizielle Faustregel 😉</strong>: Doppelt so lange, wie du denkst + 1 Tag.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="datenquellen" class="level2">
+<h2 class="anchored" data-anchor-id="datenquellen">Datenquellen</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/undraw_searching-everywhere_tffi.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="../img/undraw_searching-everywhere_tffi.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://www.destatis.de/">Statistisches Bundesamt</a></li>
+<li><a href="https://www.regionalstatistik.de">Statistische Landesämter</a></li>
+<li><a href="https://govdata.de">govdata.de – Daten von Behörden, Kommunen, etc.</a></li>
+<li><a href="https://dip.bundestag.de/">Drucksachen Bundestag</a></li>
+<li><a href="https://datasetsearch.research.google.com/">Google Dataset Search</a></li>
+</ul>
+<section id="welche-daten-dürfen-wir-benutzen" class="level3">
+<h3 class="anchored" data-anchor-id="welche-daten-dürfen-wir-benutzen">Welche Daten dürfen wir benutzen?</h3>
+<p>“Open Data” ist ein feststehender Begriff seit vielen Jahren. In Deutschland gibt es dafür verschiedenste Regelungen, aber keine umfassende Verpflichtung, dass öffentliche Einrichtungen offene Daten verfügbar machen müssen. Dabei bedeutet das, dass man Daten frei nutzen kann, ohne weitere Einschränkungen:</p>
+<blockquote class="blockquote">
+<p>“Open means anyone can freely access, use, modify, and share for any purpose (subject, at most, to requirements that preserve provenance and openness).”</p>
+<p>https://opendefinition.org/</p>
+</blockquote>
+<p>In der Praxis ist das in Deutschland oft anders umgesetzt und die datenveröffentlichende Stelle verlangt ihre Nennung. Das regelt die jeweilige Lizenz:</p>
+<ul>
+<li>“Gemeinfreiheit” <a href="https://creativecommons.org/publicdomain/zero/1.0/">CCO</a></li>
+<li><a href="https://creativecommons.org/licenses/by/4.0/deed.de">CC BY 4.0</a></li>
+<li>“Datenlizenz Deutschland” <a href="https://www.govdata.de/dl-de/by-2-0">BY</a>, <a href="https://www.govdata.de/dl-de/zero-2-0">Zero</a></li>
+</ul>
+<p><strong>govdata.de <a href="https://www.govdata.de/informationen/lizenzen">rät zu CC-Lizenzen</a></strong></p>
+</section>
+</section>
+<section id="übung-hundebiss-statistik-rheinland-pfalz-2024" class="level2">
+<h2 class="anchored" data-anchor-id="übung-hundebiss-statistik-rheinland-pfalz-2024">🏋 Übung: Hundebiss-Statistik Rheinland-Pfalz 2024</h2>
+<details>
+<summary>
+Suchtipps anzeigen
+</summary>
+<ul>
+<li>Google-Suche: “innenministerium rheinland pfalz hund filetype:pdf 2024”</li>
+<li><a href="https://add.rlp.de/fileadmin/add/Abteilung_2/Referat_23/gefaehrliche_Hunde/2024_Beissstatistik_Rheinland-Pfalz.pdf">🔗</a></li>
+</ul>
+</details>
+<details>
+<summary>
+Beispiel-Bericht anzeigen
+</summary>
+“Zahl der Verletzten durch Hundebisse in Berlin zurückgegangen” <a href="https://www.rbb24.de/panorama/beitrag/2025/05/berlin-hundebisse-statistik-weniger-verletzte-2024-hunde.html">rbb24.de</a>
+</details>
+</section>
+<section id="tools-um-tabellen-aus-pdfs-zu-extrahieren" class="level2">
+<h2 class="anchored" data-anchor-id="tools-um-tabellen-aus-pdfs-zu-extrahieren">Tools, um Tabellen aus PDFs zu extrahieren</h2>
+<ul>
+<li><p>tabula <a href="https://tabula.technology/">Download</a> oder <a href="http://tabula.ondata.it/">gehostet (<strong>öffentlich!!</strong>)</a></p></li>
+<li><p>mit der Programmiersprache Python: <a href="https://camelot-py.readthedocs.io/en/master/">camelot / excalibur</a></p></li>
+<li><p>für komplexere Dokumente, Python-Kenntnisse nötig: <a href="https://www.docling.ai/">docling</a></p></li>
+</ul>
+</section>
+<section id="wie-finde-ich-tools" class="level2">
+<h2 class="anchored" data-anchor-id="wie-finde-ich-tools">Wie finde ich Tools?</h2>
+<ul>
+<li><a href="https://alternativeto.net/software/microsoft-excel/"><strong>alternativeto.net</strong></a>: Einstellungen: “Open Source” + eigenes Betriebssystem</li>
+<li><a href="https://github.com/topics/awesome-list"><strong>github.com</strong></a>: Code-Plattform (gehört Microsoft), die kuratierte “awesome”-Listen hat, z.B. https://github.com/topics/awesome-list</li>
+<li>abgucken bei anderen:
+<ul>
+<li><a href="https://github.com/dw-data">Deutsche Welle Datenteam</a>,</li>
+<li><a href="https://github.com/byte-bayern/open-bydata-notebook-passantenzaehlung">Bayerische Digitalagentur Byte Bayern</a></li>
+<li><a href="https://github.com/search?q=30daymapchallenge&amp;type=code">30DayMapChallenge</a>, <a href="https://github.com/search?q=30daychartchallenge&amp;type=code">30DayChartChallenge</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="übung-hundebiss-statistik-berlin-über-die-jahre" class="level2">
+<h2 class="anchored" data-anchor-id="übung-hundebiss-statistik-berlin-über-die-jahre">🏋 Übung: Hundebiss-Statistik Berlin über die Jahre</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/undraw_bear-market_dhi3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="../img/undraw_bear-market_dhi3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+</figure>
+</div>
+<p>Wir erinnern uns: Auf govdata.de gab es <a href="https://www.govdata.de/suche/daten/hundebiss-statistik-berlin">Datensätze bis 2016 zurück</a>…</p>
+<p>Herausforderungen: - wir müssen die alle runterladen (= scraping) - idealerweise brauchen wir das in einer Datei (= coding)</p>
+<section id="schritt-1-links-zu-csv-dateien-sammeln" class="level3">
+<h3 class="anchored" data-anchor-id="schritt-1-links-zu-csv-dateien-sammeln">Schritt 1: Links zu csv-Dateien sammeln</h3>
+<ul>
+<li>Browser öffnen + Developer-Tools ausklappen (Win/Linux: <code>Ctrl + Shift + I</code> or <code>F12</code>; macOS: <code>Cmd + Opt + I</code>)</li>
+<li>Ganz links in der Ecke auf das Icon mit Rechteck und Cursor klicken (Win/Linux: <code>Ctrl + Shift + C</code>; macOS: <code>Cmd + Opt + C</code>)</li>
+<li>jetzt zu einem csv-Button navigieren und anklicken</li>
+</ul>
+</section>
+<section id="schritt-3-r-installieren" class="level3">
+<h3 class="anchored" data-anchor-id="schritt-3-r-installieren">Schritt 3: R installieren</h3>
+<p><a href="https://cran.rstudio.com/">R-Download</a></p>
+</section>
+<section id="schritt-4-rstudio-installieren" class="level3">
+<h3 class="anchored" data-anchor-id="schritt-4-rstudio-installieren">Schritt 4: RStudio installieren</h3>
+<p><a href="https://posit.co/download/rstudio-desktop">RStudio-Download</a></p>
+</section>
+<section id="schritt-5-r-projekt-anlegen" class="level3">
+<h3 class="anchored" data-anchor-id="schritt-5-r-projekt-anlegen">Schritt 5: R-Projekt anlegen</h3>
+<p>Empfehlung für eine Ordnerstruktur:</p>
+<pre><code>├── code
+├── data
+│&nbsp;&nbsp; ├── raw
+│&nbsp;&nbsp; ├── helpers
+│&nbsp;&nbsp; ├── processed
+│&nbsp;&nbsp; └── final
+└── report
+ &nbsp;&nbsp; ├── img
+ &nbsp;&nbsp; └── docs</code></pre>
+<p><strong>anlegen:</strong></p>
+<ol type="1">
+<li>Anwendung “Terminal” suchen → öffnen</li>
+<li>ein paar Befehle ausprobieren:</li>
+</ol>
+<ul>
+<li><code>ls -l</code> listet alle Ordner und Dateien auf, mit ein paar Metadaten</li>
+<li><code>cd /hier/ein/pfad/zum/ordner</code> springt zu einem Ordner</li>
+<li><code>pwd</code> zeigt an, in welchem Ordner man sich gerade befindet</li>
+<li>alle Ordner wie oben anlegen: 🪄</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> code data/raw data/helpers data/processed data/final report/img report/docs</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="schritt-6-code-kopieren-ausführen-glücklich-werden" class="level3">
+<h3 class="anchored" data-anchor-id="schritt-6-code-kopieren-ausführen-glücklich-werden">Schritt 6: Code kopieren, ausführen, glücklich werden</h3>
+<details>
+<summary>
+Code anzeigen
+</summary>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># load libraries</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co"># read html</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>html <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">"https://www.govdata.de/suche/daten/hundebiss-statistik-berlin"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6"></a></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="co"># extract all links</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>links <span class="ot">&lt;-</span> html <span class="sc">|&gt;</span> </span>
+<span id="cb3-9"><a href="#cb3-9"></a>  <span class="fu">html_elements</span>(<span class="st">"a"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-10"><a href="#cb3-10"></a>  <span class="fu">html_attr</span>(<span class="st">"href"</span>)</span>
+<span id="cb3-11"><a href="#cb3-11"></a></span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="co"># filter links if they end with ".csv"</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a>csv_links <span class="ot">&lt;-</span> links[<span class="fu">str_detect</span>(links, <span class="st">".csv$"</span>)]</span>
+<span id="cb3-14"><a href="#cb3-14"></a></span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="co"># download all csv files</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a><span class="cf">for</span> (u <span class="cf">in</span> csv_links) {</span>
+<span id="cb3-17"><a href="#cb3-17"></a>  <span class="fu">download.file</span>(u, <span class="fu">file.path</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/raw"</span>), <span class="fu">basename</span>(u)))</span>
+<span id="cb3-18"><a href="#cb3-18"></a>}</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</details>
+</section>
+</section>
+<section id="langeweile" class="level2">
+<h2 class="anchored" data-anchor-id="langeweile">Langeweile?</h2>
+<section id="weiterlesen--hören" class="level3">
+<h3 class="anchored" data-anchor-id="weiterlesen--hören">Weiterlesen / -hören</h3>
+<ul>
+<li>Storytelling:
+<ul>
+<li>Sven Preger (2024): <a href="https://d-nb.info/1309433496">“Geschichten erzählen : Storytelling für Radio und Podcast”</a></li>
+<li>BR kontrovers (2025): <a href="https://www.ardmediathek.de/video/kontrovers/bauen-im-ueberschwemmungsgebiet-unterwegs-mit-der-dorfpolizei-und-mehr/br/Y3JpZDovL2JyLmRlL2Jyb2FkY2FzdC9GMjAyNFdPMDE1NjE5QTA">“Bauen im Überschwemmungsgebiet, Unterwegs mit der Dorfpolizei und mehr”</a></li>
+</ul></li>
+<li>Datenjournalismus:
+<ul>
+<li>Christina Elmer, Lorenz Matzat (Hrsg.): <a href="https://d-nb.info/1347471243">“Handbuch Daten und KI im Journalismus”</a></li>
+</ul></li>
+<li>Journalismus allgemein:
+<ul>
+<li>Gabriele Hooffacker, Klaus Meier (2026): <a href="https://d-nb.info/1382295715">“La Roches Einführung in den praktischen Journalismus”</a></li>
+<li>Maria Ressa (2022): <a href="https://d-nb.info/1291085807">“How to stand up to a dictator”</a></li>
+<li>Podcast: Anja Reschke im Hotel Matze (2025): <a href="https://hotelmatze.podigee.io/469-anja-reschke">“Welche Aufgabe hat der Journalismus”</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="ausprobieren" class="level3">
+<h3 class="anchored" data-anchor-id="ausprobieren">Ausprobieren</h3>
+<ul>
+<li>immer nett: Was waren die häufigsten Vornamen, z.B. in <a href="https://www.govdata.de/suche/daten/vornamen-von-neugeborenen-2025">Rostock</a> oder <a href="https://www.govdata.de/suche/daten/liste-der-haufigen-vornamen-in-berlin-2023">Berlin</a></li>
+</ul>
+</section>
+</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Shared content appears in both outputs.</p>
+<ul>
+<li>Shared point 1</li>
+<li>Shared point 2</li>
+</ul>
+<div class="{.content-visible-when-format=&quot;html&quot;}">
+<p>This is <strong>HTML-only</strong> material: detailed explanations, extra references, interactive content, or long derivations.</p>
+</div>
+<div class="{.content-visible-when-format=&quot;clean-typst&quot;}">
+<p>This is <strong>slide-only</strong> material: concise wording or notes intended for the projected deck.</p>
+</div>
+</section>
+<section id="data-example" class="level1">
+<h1>Data Example</h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a>y <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="fu">plot</span>(x, y, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">"steelblue"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="fu">abline</span>(<span class="fu">lm</span>(y <span class="sc">~</span> x), <span class="at">col =</span> <span class="st">"darkred"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-data" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="2026-10-22_tools_files/figure-html/fig-data-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Abbildung&nbsp;1: Simple scatter plot"><img src="2026-10-22_tools_files/figure-html/fig-data-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Simple scatter plot
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="{.content-visible-when-format=&quot;clean-typst&quot;}">
+<p>The slope is approximately 2.</p>
+</div>
+</section>
+<section id="appearing-elements" class="level1">
+<h1>Appearing Elements</h1>
+<div class="{.content-visible-when-format=&quot;clean-typst&quot;}">
+<p>Use native Typst/Touying code for overlays:</p>
+</div>
+<!--
+
+::: {.content-visible-when-format="html"}
+
+![](../slides/slide-01.png)
+
+![](../slides/slide-02.png)
+
+:::
+-->
+<div class="carousel">
+<p><img src="../slides/slide-01.png" class="img-fluid"> <img src="../slides/slide-02.png" class="img-fluid"></p>
+</div>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Kopiert");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Kopiert");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/your-website-url\.example\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../session_notes/2026-10-14_intro.html" class="pagination-link" aria-label="00 Einführung">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">00 Einführung</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Quellcode</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="an">title:</span><span class="co"> "01 Tools"</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="an">date:</span><span class="co"> "2026-10-22"</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="an">categories:</span><span class="co"> [erwartungen, storytelling, journalismus, ethik]</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="co">---</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a></span>
+<span id="cb5-8"><a href="#cb5-8"></a>::: {.callout-note icon=false}</span>
+<span id="cb5-9"><a href="#cb5-9"></a></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="fu">## Worum es heute geht</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="ss">* </span>**Theorie**:</span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="ss">  - </span>Grundprinzipien der Datenarbeit (Zeit- und Projektplanung)</span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="ss">  - </span>Datenquellen, Lizenzen &amp; Open Data</span>
+<span id="cb5-15"><a href="#cb5-15"></a>  </span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="ss">* </span>**Praxis**:</span>
+<span id="cb5-17"><a href="#cb5-17"></a><span class="ss">  - </span>Tabellarische Dateiformate in Tabellenkalkulation laden und aufbereiten</span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="ss">  - </span>Fragen an einen Datensatz entwickeln</span>
+<span id="cb5-19"><a href="#cb5-19"></a><span class="ss">  - </span>Tabelle aus PDF extrahieren</span>
+<span id="cb5-20"><a href="#cb5-20"></a>  </span>
+<span id="cb5-21"><a href="#cb5-21"></a><span class="ss">* </span>**Technik**:</span>
+<span id="cb5-22"><a href="#cb5-22"></a><span class="ss">  - </span>Dateiformate: csv, Tabellen in PDF</span>
+<span id="cb5-23"><a href="#cb5-23"></a><span class="ss">  - </span>Tools: LibreOffice, Datawrapper, Tabula, Developertools</span>
+<span id="cb5-24"><a href="#cb5-24"></a></span>
+<span id="cb5-25"><a href="#cb5-25"></a><span class="ss">* </span>**Daten**:</span>
+<span id="cb5-26"><a href="#cb5-26"></a><span class="ss">  - </span>Hundebiss-Statistik Berlin &amp; Rheinland-Pfalz</span>
+<span id="cb5-27"><a href="#cb5-27"></a>:::</span>
+<span id="cb5-28"><a href="#cb5-28"></a></span>
+<span id="cb5-29"><a href="#cb5-29"></a>--- </span>
+<span id="cb5-30"><a href="#cb5-30"></a></span>
+<span id="cb5-31"><a href="#cb5-31"></a><span class="fu">## Beispiel: "Wie Europa seinen Solarboom finanziert"</span></span>
+<span id="cb5-32"><a href="#cb5-32"></a></span>
+<span id="cb5-33"><a href="#cb5-33"></a><span class="al">![](../img/undraw_best-place_dhzp.png)</span>{width=20% fig-align="center"}</span>
+<span id="cb5-34"><a href="#cb5-34"></a></span>
+<span id="cb5-35"><a href="#cb5-35"></a>_von Kira Schacht / Deutsche Welle_ <span class="co">[</span><span class="ot">🔗 Deutsch</span><span class="co">](https://www.dw.com/de/solarausbau-in-europ%C3%A4ischen-l%C3%A4ndern-photovoltaik-subventionen-f%C3%B6rderung-hausdach-balkon-eigenheim/a-71676260)</span></span>
+<span id="cb5-36"><a href="#cb5-36"></a><span class="co">[</span><span class="ot">🔗 English</span><span class="co">](https://www.dw.com/en/how-europe-is-paying-for-its-solar-boom/a-71640144)</span></span>
+<span id="cb5-37"><a href="#cb5-37"></a></span>
+<span id="cb5-38"><a href="#cb5-38"></a>::: {.callout-note icon=false}</span>
+<span id="cb5-39"><a href="#cb5-39"></a><span class="fu">## Fragen zum Lesen:</span></span>
+<span id="cb5-40"><a href="#cb5-40"></a><span class="ss">1. </span>Was gefällt dir (nicht)? Warum?</span>
+<span id="cb5-41"><a href="#cb5-41"></a><span class="ss">2. </span>Was interessiert dich? Was langweilt dich?</span>
+<span id="cb5-42"><a href="#cb5-42"></a><span class="ss">3. </span>Wenn du fertig bist: Was ist hängen geblieben?</span>
+<span id="cb5-43"><a href="#cb5-43"></a>:::</span>
+<span id="cb5-44"><a href="#cb5-44"></a></span>
+<span id="cb5-45"><a href="#cb5-45"></a>---</span>
+<span id="cb5-46"><a href="#cb5-46"></a></span>
+<span id="cb5-47"><a href="#cb5-47"></a>:::{.content-visible when-format="html"}</span>
+<span id="cb5-48"><a href="#cb5-48"></a><span class="al">![](../img/undraw_reading_6jjr.png)</span>{width=20% fig-align="center"}</span>
+<span id="cb5-49"><a href="#cb5-49"></a>:::</span>
+<span id="cb5-50"><a href="#cb5-50"></a></span>
+<span id="cb5-51"><a href="#cb5-51"></a><span class="fu">## Storytelling – Die Grundlagen</span></span>
+<span id="cb5-52"><a href="#cb5-52"></a></span>
+<span id="cb5-53"><a href="#cb5-53"></a><span class="fu">### 1. Was ist eine Geschichte?</span></span>
+<span id="cb5-54"><a href="#cb5-54"></a></span>
+<span id="cb5-55"><a href="#cb5-55"></a>::: {.content-hidden when-format="typst"}</span>
+<span id="cb5-56"><a href="#cb5-56"></a></span>
+<span id="cb5-57"><a href="#cb5-57"></a>Gute Frage, hierzu könnte man ein eigenes Studium machen. Oder man nimmt die Abkürzung und liest ein Buch wie beispielsweise "Storytelling" von Sven Preger, der vor allem Audio-Geschichten erzählt, z.B. für den Deutschlandfunk oder den WDR. Darin steht:</span>
+<span id="cb5-58"><a href="#cb5-58"></a></span>
+<span id="cb5-59"><a href="#cb5-59"></a>:::</span>
+<span id="cb5-60"><a href="#cb5-60"></a></span>
+<span id="cb5-61"><a href="#cb5-61"></a>**"Eine Geschichte besteht in aller Regel aus drei Basis-Elementen: eine</span>
+<span id="cb5-62"><a href="#cb5-62"></a>aktiv-handelnde Person, ein konkretes Ziel und (etliche) Widerstände.**</span>
+<span id="cb5-63"><a href="#cb5-63"></a></span>
+<span id="cb5-64"><a href="#cb5-64"></a></span>
+<span id="cb5-65"><a href="#cb5-65"></a>::: {.content-hidden when-format="typst"}</span>
+<span id="cb5-66"><a href="#cb5-66"></a></span>
+<span id="cb5-67"><a href="#cb5-67"></a>Es gibt viele Möglichkeiten, diese Basis-Elemente zu strukturieren. In der Erzähltheorie gibt es verschiedene Modelle, wie Handlungen strukturiert sein können. Ganz klassisch, wie in den Dramen von Goethe und Schiller lernt man in der Schule oft den Aufbau, der sich bis auf Sophokles im antiken Griechenland zurückführen lässt: auslösendes Moment im ersten Akt, Zuspitzung des Konflikts im zweiten Akt, Herausforderung im dritten, Höhepunkt im vierten und dann die Auflösung im fünften Akt. Hier eine Abbildung aus einem mehr oder weniger zufällig ausgewählten Lehrbuch <span class="co">&lt;!--[@harzer2017, S. 197]:--&gt;</span></span>
+<span id="cb5-68"><a href="#cb5-68"></a></span>
+<span id="cb5-69"><a href="#cb5-69"></a>:::</span>
+<span id="cb5-70"><a href="#cb5-70"></a></span>
+<span id="cb5-71"><a href="#cb5-71"></a><span class="al">![](../img/Screenshot_Literarische_Texte_Harzer2017_S_197.png)</span>{fig-align="center"}</span>
+<span id="cb5-72"><a href="#cb5-72"></a></span>
+<span id="cb5-73"><a href="#cb5-73"></a>::: {.content-hidden when-format="typst"}</span>
+<span id="cb5-74"><a href="#cb5-74"></a></span>
+<span id="cb5-75"><a href="#cb5-75"></a>Insbesondere in der Filmindustrie ist mittlerweile aber auch das Konzept der "Heldenreise" verbreitet, hier dargestellt von Sven Preger in seinem Buch "Storytelling" (S. 74): </span>
+<span id="cb5-76"><a href="#cb5-76"></a></span>
+<span id="cb5-77"><a href="#cb5-77"></a>:::</span>
+<span id="cb5-78"><a href="#cb5-78"></a></span>
+<span id="cb5-79"><a href="#cb5-79"></a><span class="al">![](../img/Screenshot_Storytelling_Preger2024_S_74.png)</span></span>
+<span id="cb5-80"><a href="#cb5-80"></a></span>
+<span id="cb5-81"><a href="#cb5-81"></a></span>
+<span id="cb5-82"><a href="#cb5-82"></a>::: {.content-hidden when-format="typst"}</span>
+<span id="cb5-83"><a href="#cb5-83"></a></span>
+<span id="cb5-84"><a href="#cb5-84"></a>Das ist natürlich ganz schön detailliert und komplex. Um die eigene Geschichte zu strukturieren, schlägt Sven Preger deshalb, kurz und prägnant, einen Erzählsatz vor:</span>
+<span id="cb5-85"><a href="#cb5-85"></a></span>
+<span id="cb5-86"><a href="#cb5-86"></a>:::</span>
+<span id="cb5-87"><a href="#cb5-87"></a></span>
+<span id="cb5-88"><a href="#cb5-88"></a><span class="at">&gt;  "A (der Protagonist) will B (seine Absicht/sein Ziel), weil er C (die Motivation), stößt aber auf D (Hindernisse). Diese Hindernisse muss der Protagonist überwinden, oder es zumindest versuchen. Der Erzählsatz ist damit der Kompass, an dem sich die Geschichte ausrichtet."</span></span>
+<span id="cb5-89"><a href="#cb5-89"></a></span>
+<span id="cb5-90"><a href="#cb5-90"></a><span class="fu">### 2. Was ist eine Nachricht?</span></span>
+<span id="cb5-91"><a href="#cb5-91"></a></span>
+<span id="cb5-92"><a href="#cb5-92"></a>Jetzt soll eine Geschichte ja in unserem Fall nicht fiktional sein, sondern vor allem Wissen vermitteln. Aber was ist überhaupt relevant, und damit vermittelnswert?</span>
+<span id="cb5-93"><a href="#cb5-93"></a></span>
+<span id="cb5-94"><a href="#cb5-94"></a>Im Journalismus gibt es unterschiedliche Darstellungsformen. Grob unterteilt man in informierende und meinungsäußernde Formen. Informierend sind Nachrichten, Reportagen, Interviews oder Korrespondentenberichte. Meinungsäußernd ist zum Beispiel der Kommentar.</span>
+<span id="cb5-95"><a href="#cb5-95"></a></span>
+<span id="cb5-96"><a href="#cb5-96"></a>Eine Nachricht sollte möglichst viele der sieben wichten Fragen beantworten – diese können wir verwenden, um Fragen an unsere Daten zu entwickeln:</span>
+<span id="cb5-97"><a href="#cb5-97"></a></span>
+<span id="cb5-98"><a href="#cb5-98"></a><span class="ss">- </span>**Wer?** _(Wer hat am meisten...? Wer hat am wenigsten...?)_</span>
+<span id="cb5-99"><a href="#cb5-99"></a><span class="ss">- </span>**Was?** _(Was ist anders als vielleicht angenommen?)_</span>
+<span id="cb5-100"><a href="#cb5-100"></a><span class="ss">- </span>**Wo?** _(Wo häufen sich die Ereignisse?)_</span>
+<span id="cb5-101"><a href="#cb5-101"></a><span class="ss">- </span>**Wann?** _(Wann hat sich etwas verändert? Wie hat sich etwas entwickelt?)_</span>
+<span id="cb5-102"><a href="#cb5-102"></a><span class="ss">- </span>**Wie?** _(Wie hängen x und y zusammen?)_</span>
+<span id="cb5-103"><a href="#cb5-103"></a><span class="ss">- </span>(**Warum?**)</span>
+<span id="cb5-104"><a href="#cb5-104"></a><span class="ss">- </span>**Woher?** _(Woher kommen die Daten? Wer hat sie mit welchem Interesse erhoben?)_</span>
+<span id="cb5-105"><a href="#cb5-105"></a></span>
+<span id="cb5-106"><a href="#cb5-106"></a>(siehe Einführung in den praktischen Journalismus)</span>
+<span id="cb5-107"><a href="#cb5-107"></a></span>
+<span id="cb5-108"><a href="#cb5-108"></a>::: {.callout-note icon=false}</span>
+<span id="cb5-109"><a href="#cb5-109"></a><span class="fu">## Praktische Probe, ob eine Nachricht relevant ist</span></span>
+<span id="cb5-110"><a href="#cb5-110"></a>**Der "Küchenzuruf":** Eine Zusammenfassung der zentralen Aussage in maximal zwei Sätzen. Der Begriff wurde vom Stern-Redakteur Henri Nannen geprägt und durch eine beispielhafte Situation erklärt, in der ein gewisser Hans im Esszimmer den ‚Stern‘ liest, während „Frau Grete“ in der Küche „sich die Schürze umbindet, um sich für den Abwasch vorzubereiten“. Nach „beendigter Lektüre“ ruft Hans seiner Grete in die Küche zu: „Mensch Grete, die in Bonn spinnen komplett! Die wollen schon wieder die Steuern erhöhen!“</span>
+<span id="cb5-111"><a href="#cb5-111"></a></span>
+<span id="cb5-112"><a href="#cb5-112"></a>Das würde man heute hoffentlich anders erklären, aber das Prinzip bleibt das gleiche:</span>
+<span id="cb5-113"><a href="#cb5-113"></a></span>
+<span id="cb5-114"><a href="#cb5-114"></a>**"Hey, hast du schon gehört? ...!"**</span>
+<span id="cb5-115"><a href="#cb5-115"></a>:::</span>
+<span id="cb5-116"><a href="#cb5-116"></a></span>
+<span id="cb5-117"><a href="#cb5-117"></a></span>
+<span id="cb5-118"><a href="#cb5-118"></a><span class="fu">## Grundprinzipien der Datenarbeit</span></span>
+<span id="cb5-119"><a href="#cb5-119"></a></span>
+<span id="cb5-120"><a href="#cb5-120"></a><span class="al">![](../img/undraw_personal-file_81l0.png)</span>{width=60% fig-align="center"}</span>
+<span id="cb5-121"><a href="#cb5-121"></a></span>
+<span id="cb5-122"><a href="#cb5-122"></a><span class="ss">1. </span>**Wir verändern niemals Originaldaten.**</span>
+<span id="cb5-123"><a href="#cb5-123"></a><span class="ss">2. </span>Wir arbeiten möglichst **nachvollziehbar**, also möglichst nah am Original.</span>
+<span id="cb5-124"><a href="#cb5-124"></a><span class="ss">3. </span>Wir **dokumentieren** unsere Arbeitsschritte, um sie reproduzieren zu können.</span>
+<span id="cb5-125"><a href="#cb5-125"></a></span>
+<span id="cb5-126"><a href="#cb5-126"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color: #008cba"</span><span class="dt">&gt;</span>→ Wir rechnen also mit Fehlern und arbeiten so, dass wir sie finden und korrigieren können.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-127"><a href="#cb5-127"></a></span>
+<span id="cb5-128"><a href="#cb5-128"></a><span class="fu">### Das Ding mit der Objektivität...</span></span>
+<span id="cb5-129"><a href="#cb5-129"></a></span>
+<span id="cb5-130"><a href="#cb5-130"></a>Die Vorstellung, Journalismus müsse "neutral" sein, ist weit verbreitet. Tatsächlich steht im <span class="co">[</span><span class="ot">Medienstaatsvertrag</span><span class="co">](https://www.gesetze-bayern.de/Content/Document/MStV/true)</span> aber kein Wort von Neutralität in Bezug auf den Journalismus. Stattdessen sind die öffentlich-rechtlichen Medienanstalten verpflichtet zur "unabhängigen, sachlichen, wahrheitsgemäßen und umfassenden Information und Berichterstattung". (Kann man nachlesen oder in sechs Minuten <span class="co">[</span><span class="ot">hier nachhören.</span><span class="co">](https://www.swr.de/swrkultur/wissen/muss-der-oeffentlich-rechtliche-rundfunk-neutral-sein-108.html)</span>)</span>
+<span id="cb5-131"><a href="#cb5-131"></a></span>
+<span id="cb5-132"><a href="#cb5-132"></a>Ein verbreitetes Zitat stammt von dem Fernseh-Journalisten Hanns Joachim Friedrichs: "Einen guten Journalisten erkennt man daran, dass er sich nicht gemein macht mit einer Sache, auch nicht mit einer guten Sache." Das kann ohne Kontext aber leicht missverstanden werden und wird immer wieder diskutiert. Die beste Einordnung liefert ein Text von <span class="co">[</span><span class="ot">Uebermedien</span><span class="co">](https://uebermedien.de/64851/mit-keiner-sache-gemein-die-wahrheit-ueber-das-hanns-joachim-friedrichs-zitat/)</span>. Der Kern: Journalist*innen müssen berichten über alles, was in der Welt passiert. Und dürfen sich davon nicht überrollen lassen. Sonst könnten sie ihren Job nicht machen.</span>
+<span id="cb5-133"><a href="#cb5-133"></a></span>
+<span id="cb5-134"><a href="#cb5-134"></a>Wie sich Journalist*innen, insbesondere im öffentlich-rechtlichen Rundfunk, äußern dürfen, wird immer wieder angegriffen. Aktuell beispielsweise in Bayern mit <span class="co">[</span><span class="ot">Reformplänen für ein neues Rundfunkgesetz</span><span class="co">](https://www.br.de/nachrichten/bayern/reformplaene-fuer-br-geplantes-rundfunkgesetz-stoesst-auf-kritik,VHLgaym)</span>. Das will unter anderem im Prinzip eine "Informationsquote" fürs Fernsehen vorschreiben. Aber auch die Zivilgesellschaft soll sich möglichst nicht "politisch" äußern – das Demokratieförderprogramm soll gerade unter Leitung von Ministerin Karin Prien "in die Mitte" gerückt werden. Hier gut erklärt in einem <span class="co">[</span><span class="ot">Artikel der Zeit</span><span class="co">](https://www.zeit.de/politik/deutschland/2026-04/demokratie-leben-programm-foerderung-karin-prien)</span>. Was bleibt: Alleine die permanente Unterstellung, dass Institutionen, die sich für ein vielfältiges und friedliches Miteinander einsetzen, "links" sind, verunsichert.</span>
+<span id="cb5-135"><a href="#cb5-135"></a></span>
+<span id="cb5-136"><a href="#cb5-136"></a>Umso wichtiger ist gute Arbeit – und erklären, was gute Arbeit ist. Im Kontext von Daten heißt das:</span>
+<span id="cb5-137"><a href="#cb5-137"></a></span>
+<span id="cb5-138"><a href="#cb5-138"></a>:::{.callout-note icon=false}</span>
+<span id="cb5-139"><a href="#cb5-139"></a></span>
+<span id="cb5-140"><a href="#cb5-140"></a><span class="fu">## Leitlinien</span></span>
+<span id="cb5-141"><a href="#cb5-141"></a>Es gibt viele allgemein akzeptierte Regeln für zuverlässige Recherche. Hier sind ein paar:</span>
+<span id="cb5-142"><a href="#cb5-142"></a></span>
+<span id="cb5-143"><a href="#cb5-143"></a><span class="ss">- </span>Bemühe dich, alle relevanten Quellen zu finden.</span>
+<span id="cb5-144"><a href="#cb5-144"></a><span class="ss">- </span>Lasse keine Quelle unter den Tisch fallen, nur weil sie etwas anderes behauptet, als du dir erhofft hast.</span>
+<span id="cb5-145"><a href="#cb5-145"></a><span class="ss">- </span>Mache deinen Quellen transparent.</span>
+<span id="cb5-146"><a href="#cb5-146"></a><span class="ss">- </span>Zitiere korrekt und ohne Aussagen aus dem Kontext zu reißen.</span>
+<span id="cb5-147"><a href="#cb5-147"></a><span class="ss">- </span>Formuliere deine Erkenntnisse so deutlich und konkret wie möglich.</span>
+<span id="cb5-148"><a href="#cb5-148"></a><span class="ss">- </span>Weise ehrlich darauf hin, was du nicht herausfinden konntest.</span>
+<span id="cb5-149"><a href="#cb5-149"></a><span class="ss">- </span>Lasse einen unabhängigen Experten über deine Arbeit schauen, bevor du sie publizierst.</span>
+<span id="cb5-150"><a href="#cb5-150"></a></span>
+<span id="cb5-151"><a href="#cb5-151"></a><span class="co">&lt;!--[vgl. @sengers2018, S. 20f]--&gt;</span> </span>
+<span id="cb5-152"><a href="#cb5-152"></a>:::</span>
+<span id="cb5-153"><a href="#cb5-153"></a></span>
+<span id="cb5-154"><a href="#cb5-154"></a><span class="co">&lt;!-- Denn ganz wichtig: Daten brauchen Kontext. Und der muss mitgedacht werden! Sonst wird es unangenehm, wie für Innenminister Alexander Dobrindt 2025 zum Verfassungsschutzbericht. Der Bericht von [T-Online](https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_100762108/linksextremismus-zahlen-dobrindt-fuer-verzerrte-darstellung-kritisiert.html) zeigt gut, wie zwei gleich aussehende Grafiken unterschiedliche Skalen hatten:</span></span>
+<span id="cb5-155"><a href="#cb5-155"></a><span class="co">![](https://../img.t-online.de/2025/06/3fbIzxVWGofr/0x0:3200x4000/fit-in/1366x0/image.jpg){width=40%}</span></span>
+<span id="cb5-156"><a href="#cb5-156"></a><span class="co">--&gt;</span> </span>
+<span id="cb5-157"><a href="#cb5-157"></a></span>
+<span id="cb5-158"><a href="#cb5-158"></a><span class="fu">## Wie plane ich ein Datenprojekt?</span></span>
+<span id="cb5-159"><a href="#cb5-159"></a></span>
+<span id="cb5-160"><a href="#cb5-160"></a><span class="al">![](../img/undraw_processing-thoughts_wakg.png)</span>{width=50% fig-align="center"}</span>
+<span id="cb5-161"><a href="#cb5-161"></a></span>
+<span id="cb5-162"><a href="#cb5-162"></a><span class="fu">### Beispielablauf</span></span>
+<span id="cb5-163"><a href="#cb5-163"></a><span class="ss">0. </span>**Idee:** Irgendjemand hat eine Idee...</span>
+<span id="cb5-164"><a href="#cb5-164"></a><span class="ss">1. </span>**Datenrecherche**: Welche Daten gibt es?</span>
+<span id="cb5-165"><a href="#cb5-165"></a><span class="ss">2. </span>**Quellenkritik**: Was können die Daten sagen, was nicht?</span>
+<span id="cb5-166"><a href="#cb5-166"></a><span class="ss">3. </span>**Hypothesen finden**: "Drehbuch der Recherche"</span>
+<span id="cb5-167"><a href="#cb5-167"></a><span class="ss">4. </span>**Daten analysieren**: Hypothesen prüfen</span>
+<span id="cb5-168"><a href="#cb5-168"></a><span class="ss">5. </span>**Daten einordnen lassen**: Expert<span class="sc">\*</span>innen suchen, Interviews und Hintergrundgespräche führen</span>
+<span id="cb5-169"><a href="#cb5-169"></a><span class="ss">6. </span>**Veröffentlichung planen**: Grafiken entwerfen, texten</span>
+<span id="cb5-170"><a href="#cb5-170"></a><span class="ss">7. </span>**Ergebnisse verifizieren**: mindestens 4-Augen-Check</span>
+<span id="cb5-171"><a href="#cb5-171"></a></span>
+<span id="cb5-172"><a href="#cb5-172"></a><span class="fu">## 🏋 Übung: Hundebiss-Statistik Berlin 2024</span></span>
+<span id="cb5-173"><a href="#cb5-173"></a></span>
+<span id="cb5-174"><a href="#cb5-174"></a><span class="al">![](../img/undraw_page-eaten_b2rt.png)</span>{width=30% fig-align="center"}</span>
+<span id="cb5-175"><a href="#cb5-175"></a></span>
+<span id="cb5-176"><a href="#cb5-176"></a>**"Gestern hat ein Hund einen Menschen schwer verletzt. Passiert sowas eigentlich öfter?"**</span>
+<span id="cb5-177"><a href="#cb5-177"></a></span>
+<span id="cb5-178"><a href="#cb5-178"></a><span class="fu">### 1. 🔍 **Datenrecherche**: Welche Daten gibt es?</span></span>
+<span id="cb5-179"><a href="#cb5-179"></a></span>
+<span id="cb5-180"><a href="#cb5-180"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="dt">&gt;&lt;</span><span class="kw">summary</span><span class="dt">&gt;</span>Suchtipps anzeigen<span class="dt">&lt;/</span><span class="kw">summary</span><span class="dt">&gt;</span></span>
+<span id="cb5-181"><a href="#cb5-181"></a><span class="ss">- </span>Suchmaschine → <span class="co">[</span><span class="ot">Website Berlin</span><span class="co">](https://www.berlin.de/sen/verbraucherschutz/aufgaben/hundehaltung/hundebiss-statistik/hundebiss-statistik-2024/)</span></span>
+<span id="cb5-182"><a href="#cb5-182"></a><span class="ss">- </span>govdata.de → <span class="co">[</span><span class="ot">Datensatz zum Download</span><span class="co">](https://www.govdata.de/suche/daten/hundebiss-statistik-berlin)</span></span>
+<span id="cb5-183"><a href="#cb5-183"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span></span>
+<span id="cb5-184"><a href="#cb5-184"></a></span>
+<span id="cb5-185"><a href="#cb5-185"></a><span class="fu">#### Wir mögen CSV-Dateien</span></span>
+<span id="cb5-186"><a href="#cb5-186"></a><span class="ss">- </span>größter Vorteil: klein</span>
+<span id="cb5-187"><a href="#cb5-187"></a><span class="ss">- </span>sehr schlicht, können eigentlich alle Programme öffnen</span>
+<span id="cb5-188"><a href="#cb5-188"></a><span class="ss">- </span>Nachteil: speichern keinen Kontext</span>
+<span id="cb5-189"><a href="#cb5-189"></a></span>
+<span id="cb5-190"><a href="#cb5-190"></a><span class="fu">### 2. 📐 **Quellenkritik**: Was können die Daten sagen, was nicht?</span></span>
+<span id="cb5-191"><a href="#cb5-191"></a><span class="ss">- </span>Was sind die aktuellsten verfügbaren Daten – in welchen Zyklen werden frische Daten veröffentlicht? </span>
+<span id="cb5-192"><a href="#cb5-192"></a><span class="ss">- </span>Könnte es ein, dass bis zur geplanten Veröffentlichung aktualisierte Daten bereitstehen?</span>
+<span id="cb5-193"><a href="#cb5-193"></a><span class="ss">- </span>Wie zuverlässig sind die Daten – kommen sie möglichst direkt von der Erhebungsstelle?</span>
+<span id="cb5-194"><a href="#cb5-194"></a><span class="ss">- </span>Was wissen wir über die Daten – gibt es Kontext-Informationen?</span>
+<span id="cb5-195"><a href="#cb5-195"></a></span>
+<span id="cb5-196"><a href="#cb5-196"></a><span class="fu">### 3. 🤔 **Hypothesen finden**: "Drehbuch der Recherche"</span></span>
+<span id="cb5-197"><a href="#cb5-197"></a><span class="ss">- </span>Welche Hunde haben die meisten Menschen verletzt?</span>
+<span id="cb5-198"><a href="#cb5-198"></a><span class="ss">- </span>Welche Hunde haben im Verhältnis zu allen Menschen, die sie verletzt haben, die meisten Menschen _schwer_ verletzt?</span>
+<span id="cb5-199"><a href="#cb5-199"></a><span class="ss">- </span>Welche Hunde, die nicht als gefährlich gelten, haben mehr Menschen verletzt, als solche, die als gefährlich gelten?</span>
+<span id="cb5-200"><a href="#cb5-200"></a></span>
+<span id="cb5-201"><a href="#cb5-201"></a><span class="fu">### 4. 🛠 **Daten analysieren**: Hypothesen prüfen</span></span>
+<span id="cb5-202"><a href="#cb5-202"></a><span class="ss">- </span>Hier: Summen bilden, Anteile ausrechnen</span>
+<span id="cb5-203"><a href="#cb5-203"></a></span>
+<span id="cb5-204"><a href="#cb5-204"></a><span class="fu">### 5. 💬 **Daten einordnen lassen**: Interviews &amp; Hintergrund</span></span>
+<span id="cb5-205"><a href="#cb5-205"></a><span class="ss">- </span>Gibt es einen Kontakt zur datenveröffentlichenden Stelle – wer ist fachlich zuständig?</span>
+<span id="cb5-206"><a href="#cb5-206"></a><span class="ss">- </span>Welche Expert<span class="sc">\*</span>innen beschäftigen sich noch mit den Daten und können in einem Hintergrundgespräch die Methodik einordnen?</span>
+<span id="cb5-207"><a href="#cb5-207"></a></span>
+<span id="cb5-208"><a href="#cb5-208"></a><span class="fu">### 6. ✍️ **Veröffentlichung planen**: Grafiken entwerfen, texten</span></span>
+<span id="cb5-209"><a href="#cb5-209"></a><span class="ss">- </span>Was ist interessant?</span>
+<span id="cb5-210"><a href="#cb5-210"></a><span class="ss">- </span>Die richtige Grafik zur Aussage finden: </span>
+<span id="cb5-211"><a href="#cb5-211"></a><span class="al">![](../img/ft_visual_vocabulary.png)</span></span>
+<span id="cb5-212"><a href="#cb5-212"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">🔗 _The_ Visual Vocabulary, developed and published by Financial Times (FT)</span><span class="co">](https://github.com/Financial-Times/chart-doctor/blob/main/visual-vocabulary/poster.png)</span></span>
+<span id="cb5-213"><a href="#cb5-213"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">🔗 Datawrapper: "A friendly guide to choosing a chart type"</span><span class="co">](https://www.datawrapper.de/blog/chart-types-guide)</span></span>
+<span id="cb5-214"><a href="#cb5-214"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">🔗 Storytelling with Data: "SWD Chart Guide"</span><span class="co">](https://www.storytellingwithdata.com/chart-guide)</span></span>
+<span id="cb5-215"><a href="#cb5-215"></a><span class="ss">- </span>Empfehlung für Visualisierungen: <span class="co">[</span><span class="ot">Datawrapper</span><span class="co">](https://www.datawrapper.de/charts)</span></span>
+<span id="cb5-216"><a href="#cb5-216"></a></span>
+<span id="cb5-217"><a href="#cb5-217"></a><span class="fu">### 7. 👀 **Ergebnisse verifizieren**: mindestens 4-Augen-Check</span></span>
+<span id="cb5-218"><a href="#cb5-218"></a><span class="ss">- </span>Aussagen auf Plausibilität prüfen</span>
+<span id="cb5-219"><a href="#cb5-219"></a><span class="ss">- </span>dokumentierte Schritte nachvollziehen</span>
+<span id="cb5-220"><a href="#cb5-220"></a></span>
+<span id="cb5-221"><a href="#cb5-221"></a>::: {.callout-warning icon=false}</span>
+<span id="cb5-222"><a href="#cb5-222"></a><span class="fu">## Wie lange dauert's denn nun?</span></span>
+<span id="cb5-223"><a href="#cb5-223"></a></span>
+<span id="cb5-224"><a href="#cb5-224"></a>**Inoffizielle Faustregel 😉**: Doppelt so lange, wie du denkst + 1 Tag.</span>
+<span id="cb5-225"><a href="#cb5-225"></a>:::</span>
+<span id="cb5-226"><a href="#cb5-226"></a></span>
+<span id="cb5-227"><a href="#cb5-227"></a><span class="fu">## Datenquellen</span></span>
+<span id="cb5-228"><a href="#cb5-228"></a></span>
+<span id="cb5-229"><a href="#cb5-229"></a><span class="al">![](../img/undraw_searching-everywhere_tffi.png)</span>{width=40% fig-align="center"}</span>
+<span id="cb5-230"><a href="#cb5-230"></a></span>
+<span id="cb5-231"><a href="#cb5-231"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Statistisches Bundesamt</span><span class="co">](https://www.destatis.de/)</span></span>
+<span id="cb5-232"><a href="#cb5-232"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Statistische Landesämter</span><span class="co">](https://www.regionalstatistik.de)</span></span>
+<span id="cb5-233"><a href="#cb5-233"></a><span class="ss">* </span><span class="co">[</span><span class="ot">govdata.de – Daten von Behörden, Kommunen, etc.</span><span class="co">](https://govdata.de)</span></span>
+<span id="cb5-234"><a href="#cb5-234"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Drucksachen Bundestag</span><span class="co">](https://dip.bundestag.de/)</span></span>
+<span id="cb5-235"><a href="#cb5-235"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Google Dataset Search</span><span class="co">](https://datasetsearch.research.google.com/)</span></span>
+<span id="cb5-236"><a href="#cb5-236"></a></span>
+<span id="cb5-237"><a href="#cb5-237"></a><span class="fu">### Welche Daten dürfen wir benutzen?</span></span>
+<span id="cb5-238"><a href="#cb5-238"></a></span>
+<span id="cb5-239"><a href="#cb5-239"></a>"Open Data" ist ein feststehender Begriff seit vielen Jahren. In Deutschland gibt es dafür verschiedenste Regelungen, aber keine umfassende Verpflichtung, dass öffentliche Einrichtungen offene Daten verfügbar machen müssen. Dabei bedeutet das, dass man Daten frei nutzen kann, ohne weitere Einschränkungen:</span>
+<span id="cb5-240"><a href="#cb5-240"></a></span>
+<span id="cb5-241"><a href="#cb5-241"></a><span class="at">&gt; “Open means anyone can freely access, use, modify, and share for any purpose (subject, at most, to requirements that preserve provenance and openness).”</span></span>
+<span id="cb5-242"><a href="#cb5-242"></a><span class="at">&gt;</span></span>
+<span id="cb5-243"><a href="#cb5-243"></a><span class="at">&gt; https://opendefinition.org/</span></span>
+<span id="cb5-244"><a href="#cb5-244"></a></span>
+<span id="cb5-245"><a href="#cb5-245"></a>In der Praxis ist das in Deutschland oft anders umgesetzt und die datenveröffentlichende Stelle verlangt ihre Nennung. Das regelt die jeweilige Lizenz:</span>
+<span id="cb5-246"><a href="#cb5-246"></a></span>
+<span id="cb5-247"><a href="#cb5-247"></a><span class="ss">* </span>"Gemeinfreiheit" <span class="co">[</span><span class="ot">CCO</span><span class="co">](https://creativecommons.org/publicdomain/zero/1.0/)</span></span>
+<span id="cb5-248"><a href="#cb5-248"></a><span class="ss">* </span><span class="co">[</span><span class="ot">CC BY 4.0</span><span class="co">](https://creativecommons.org/licenses/by/4.0/deed.de)</span></span>
+<span id="cb5-249"><a href="#cb5-249"></a><span class="ss">* </span>"Datenlizenz Deutschland" <span class="co">[</span><span class="ot">BY</span><span class="co">](https://www.govdata.de/dl-de/by-2-0)</span>, <span class="co">[</span><span class="ot">Zero</span><span class="co">](https://www.govdata.de/dl-de/zero-2-0)</span></span>
+<span id="cb5-250"><a href="#cb5-250"></a></span>
+<span id="cb5-251"><a href="#cb5-251"></a>**govdata.de [rät zu CC-Lizenzen](https://www.govdata.de/informationen/lizenzen)**</span>
+<span id="cb5-252"><a href="#cb5-252"></a></span>
+<span id="cb5-253"><a href="#cb5-253"></a><span class="fu">## 🏋 Übung: Hundebiss-Statistik Rheinland-Pfalz 2024</span></span>
+<span id="cb5-254"><a href="#cb5-254"></a></span>
+<span id="cb5-255"><a href="#cb5-255"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="dt">&gt;&lt;</span><span class="kw">summary</span><span class="dt">&gt;</span>Suchtipps anzeigen<span class="dt">&lt;/</span><span class="kw">summary</span><span class="dt">&gt;</span></span>
+<span id="cb5-256"><a href="#cb5-256"></a><span class="ss">- </span>Google-Suche: "innenministerium rheinland pfalz hund filetype:pdf 2024"</span>
+<span id="cb5-257"><a href="#cb5-257"></a><span class="ss">- </span><span class="co">[</span><span class="ot">🔗</span><span class="co">](https://add.rlp.de/fileadmin/add/Abteilung_2/Referat_23/gefaehrliche_Hunde/2024_Beissstatistik_Rheinland-Pfalz.pdf)</span></span>
+<span id="cb5-258"><a href="#cb5-258"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span></span>
+<span id="cb5-259"><a href="#cb5-259"></a></span>
+<span id="cb5-260"><a href="#cb5-260"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="dt">&gt;&lt;</span><span class="kw">summary</span><span class="dt">&gt;</span>Beispiel-Bericht anzeigen<span class="dt">&lt;/</span><span class="kw">summary</span><span class="dt">&gt;</span></span>
+<span id="cb5-261"><a href="#cb5-261"></a>"Zahl der Verletzten durch Hundebisse in Berlin zurückgegangen" <span class="co">[</span><span class="ot">rbb24.de</span><span class="co">](https://www.rbb24.de/panorama/beitrag/2025/05/berlin-hundebisse-statistik-weniger-verletzte-2024-hunde.html)</span></span>
+<span id="cb5-262"><a href="#cb5-262"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span></span>
+<span id="cb5-263"><a href="#cb5-263"></a></span>
+<span id="cb5-264"><a href="#cb5-264"></a><span class="fu">## Tools, um Tabellen aus PDFs zu extrahieren</span></span>
+<span id="cb5-265"><a href="#cb5-265"></a></span>
+<span id="cb5-266"><a href="#cb5-266"></a><span class="ss">- </span>tabula <span class="co">[</span><span class="ot">Download</span><span class="co">](https://tabula.technology/)</span> oder <span class="co">[</span><span class="ot">gehostet (**öffentlich!!**)</span><span class="co">](http://tabula.ondata.it/)</span></span>
+<span id="cb5-267"><a href="#cb5-267"></a></span>
+<span id="cb5-268"><a href="#cb5-268"></a><span class="ss">- </span>mit der Programmiersprache Python: <span class="co">[</span><span class="ot">camelot / excalibur</span><span class="co">](https://camelot-py.readthedocs.io/en/master/)</span></span>
+<span id="cb5-269"><a href="#cb5-269"></a></span>
+<span id="cb5-270"><a href="#cb5-270"></a><span class="ss">- </span>für komplexere Dokumente, Python-Kenntnisse nötig: <span class="co">[</span><span class="ot">docling</span><span class="co">](https://www.docling.ai/)</span></span>
+<span id="cb5-271"><a href="#cb5-271"></a></span>
+<span id="cb5-272"><a href="#cb5-272"></a><span class="fu">## Wie finde ich Tools?</span></span>
+<span id="cb5-273"><a href="#cb5-273"></a></span>
+<span id="cb5-274"><a href="#cb5-274"></a><span class="ss">* </span><span class="co">[</span><span class="ot">**alternativeto.net**</span><span class="co">](https://alternativeto.net/software/microsoft-excel/)</span>: Einstellungen: "Open Source" + eigenes Betriebssystem</span>
+<span id="cb5-275"><a href="#cb5-275"></a><span class="ss">* </span><span class="co">[</span><span class="ot">**github.com**</span><span class="co">](https://github.com/topics/awesome-list)</span>: Code-Plattform (gehört Microsoft), die kuratierte "awesome"-Listen hat, z.B. https://github.com/topics/awesome-list</span>
+<span id="cb5-276"><a href="#cb5-276"></a><span class="ss">* </span>abgucken bei anderen:</span>
+<span id="cb5-277"><a href="#cb5-277"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">Deutsche Welle Datenteam</span><span class="co">](https://github.com/dw-data)</span>,</span>
+<span id="cb5-278"><a href="#cb5-278"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">Bayerische Digitalagentur Byte Bayern</span><span class="co">](https://github.com/byte-bayern/open-bydata-notebook-passantenzaehlung)</span></span>
+<span id="cb5-279"><a href="#cb5-279"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">30DayMapChallenge</span><span class="co">](https://github.com/search?q=30daymapchallenge&amp;type=code)</span>, <span class="co">[</span><span class="ot">30DayChartChallenge</span><span class="co">](https://github.com/search?q=30daychartchallenge&amp;type=code)</span></span>
+<span id="cb5-280"><a href="#cb5-280"></a></span>
+<span id="cb5-281"><a href="#cb5-281"></a></span>
+<span id="cb5-282"><a href="#cb5-282"></a><span class="fu">## 🏋 Übung: Hundebiss-Statistik Berlin über die Jahre</span></span>
+<span id="cb5-283"><a href="#cb5-283"></a></span>
+<span id="cb5-284"><a href="#cb5-284"></a><span class="al">![](../img/undraw_bear-market_dhi3.png)</span>{width=40% fig-align="center"}</span>
+<span id="cb5-285"><a href="#cb5-285"></a></span>
+<span id="cb5-286"><a href="#cb5-286"></a>Wir erinnern uns: Auf govdata.de gab es <span class="co">[</span><span class="ot">Datensätze bis 2016 zurück</span><span class="co">](https://www.govdata.de/suche/daten/hundebiss-statistik-berlin)</span>...</span>
+<span id="cb5-287"><a href="#cb5-287"></a></span>
+<span id="cb5-288"><a href="#cb5-288"></a>Herausforderungen:</span>
+<span id="cb5-289"><a href="#cb5-289"></a><span class="ss">- </span>wir müssen die alle runterladen (= scraping)</span>
+<span id="cb5-290"><a href="#cb5-290"></a><span class="ss">- </span>idealerweise brauchen wir das in einer Datei (= coding)</span>
+<span id="cb5-291"><a href="#cb5-291"></a></span>
+<span id="cb5-292"><a href="#cb5-292"></a><span class="fu">### Schritt 1: Links zu csv-Dateien sammeln</span></span>
+<span id="cb5-293"><a href="#cb5-293"></a><span class="ss">* </span>Browser öffnen + Developer-Tools ausklappen (Win/Linux: <span class="in">`Ctrl + Shift + I`</span> or <span class="in">`F12`</span>; macOS: <span class="in">`Cmd + Opt + I`</span>)</span>
+<span id="cb5-294"><a href="#cb5-294"></a><span class="ss">* </span>Ganz links in der Ecke auf das Icon mit Rechteck und Cursor klicken (Win/Linux: <span class="in">`Ctrl + Shift + C`</span>; macOS: <span class="in">`Cmd + Opt + C`</span>)</span>
+<span id="cb5-295"><a href="#cb5-295"></a><span class="ss">* </span>jetzt zu einem csv-Button navigieren und anklicken</span>
+<span id="cb5-296"><a href="#cb5-296"></a></span>
+<span id="cb5-297"><a href="#cb5-297"></a><span class="fu">### Schritt 3: R installieren</span></span>
+<span id="cb5-298"><a href="#cb5-298"></a><span class="co">[</span><span class="ot">R-Download</span><span class="co">](https://cran.rstudio.com/)</span></span>
+<span id="cb5-299"><a href="#cb5-299"></a></span>
+<span id="cb5-300"><a href="#cb5-300"></a><span class="fu">### Schritt 4: RStudio installieren</span></span>
+<span id="cb5-301"><a href="#cb5-301"></a><span class="co">[</span><span class="ot">RStudio-Download</span><span class="co">](https://posit.co/download/rstudio-desktop)</span></span>
+<span id="cb5-302"><a href="#cb5-302"></a></span>
+<span id="cb5-303"><a href="#cb5-303"></a><span class="fu">### Schritt 5: R-Projekt anlegen</span></span>
+<span id="cb5-304"><a href="#cb5-304"></a></span>
+<span id="cb5-305"><a href="#cb5-305"></a>Empfehlung für eine Ordnerstruktur:</span>
+<span id="cb5-306"><a href="#cb5-306"></a></span>
+<span id="cb5-307"><a href="#cb5-307"></a><span class="in">```</span></span>
+<span id="cb5-308"><a href="#cb5-308"></a><span class="in">├── code</span></span>
+<span id="cb5-309"><a href="#cb5-309"></a><span class="in">├── data</span></span>
+<span id="cb5-310"><a href="#cb5-310"></a><span class="in">│&nbsp;&nbsp; ├── raw</span></span>
+<span id="cb5-311"><a href="#cb5-311"></a><span class="in">│&nbsp;&nbsp; ├── helpers</span></span>
+<span id="cb5-312"><a href="#cb5-312"></a><span class="in">│&nbsp;&nbsp; ├── processed</span></span>
+<span id="cb5-313"><a href="#cb5-313"></a><span class="in">│&nbsp;&nbsp; └── final</span></span>
+<span id="cb5-314"><a href="#cb5-314"></a><span class="in">└── report</span></span>
+<span id="cb5-315"><a href="#cb5-315"></a><span class="in"> &nbsp;&nbsp; ├── img</span></span>
+<span id="cb5-316"><a href="#cb5-316"></a><span class="in"> &nbsp;&nbsp; └── docs</span></span>
+<span id="cb5-317"><a href="#cb5-317"></a><span class="in">```</span></span>
+<span id="cb5-318"><a href="#cb5-318"></a></span>
+<span id="cb5-319"><a href="#cb5-319"></a>**anlegen:**</span>
+<span id="cb5-320"><a href="#cb5-320"></a></span>
+<span id="cb5-321"><a href="#cb5-321"></a><span class="ss">1. </span>Anwendung "Terminal" suchen → öffnen</span>
+<span id="cb5-322"><a href="#cb5-322"></a><span class="ss">2. </span>ein paar Befehle ausprobieren:</span>
+<span id="cb5-323"><a href="#cb5-323"></a></span>
+<span id="cb5-324"><a href="#cb5-324"></a><span class="ss">- </span><span class="in">`ls -l`</span> listet alle Ordner und Dateien auf, mit ein paar Metadaten</span>
+<span id="cb5-325"><a href="#cb5-325"></a><span class="ss">- </span><span class="in">`cd /hier/ein/pfad/zum/ordner`</span> springt zu einem Ordner</span>
+<span id="cb5-326"><a href="#cb5-326"></a><span class="ss">- </span><span class="in">`pwd`</span> zeigt an, in welchem Ordner man sich gerade befindet</span>
+<span id="cb5-327"><a href="#cb5-327"></a><span class="ss">- </span>alle Ordner wie oben anlegen: 🪄</span>
+<span id="cb5-328"><a href="#cb5-328"></a><span class="in">```{.sh code-line-numbers="false"}</span></span>
+<span id="cb5-329"><a href="#cb5-329"></a><span class="fu">mkdir</span> <span class="at">-p</span> code data/raw data/helpers data/processed data/final report/img report/docs</span>
+<span id="cb5-330"><a href="#cb5-330"></a><span class="in">```</span></span>
+<span id="cb5-331"><a href="#cb5-331"></a></span>
+<span id="cb5-332"><a href="#cb5-332"></a><span class="fu">### Schritt 6: Code kopieren, ausführen, glücklich werden</span></span>
+<span id="cb5-333"><a href="#cb5-333"></a></span>
+<span id="cb5-334"><a href="#cb5-334"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="dt">&gt;&lt;</span><span class="kw">summary</span><span class="dt">&gt;</span>Code anzeigen<span class="dt">&lt;/</span><span class="kw">summary</span><span class="dt">&gt;</span></span>
+<span id="cb5-335"><a href="#cb5-335"></a><span class="in">```{r eval=FALSE}</span></span>
+<span id="cb5-336"><a href="#cb5-336"></a><span class="co"># load libraries</span></span>
+<span id="cb5-337"><a href="#cb5-337"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb5-338"><a href="#cb5-338"></a></span>
+<span id="cb5-339"><a href="#cb5-339"></a><span class="co"># read html</span></span>
+<span id="cb5-340"><a href="#cb5-340"></a>html <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">"https://www.govdata.de/suche/daten/hundebiss-statistik-berlin"</span>)</span>
+<span id="cb5-341"><a href="#cb5-341"></a></span>
+<span id="cb5-342"><a href="#cb5-342"></a><span class="co"># extract all links</span></span>
+<span id="cb5-343"><a href="#cb5-343"></a>links <span class="ot">&lt;-</span> html <span class="sc">|&gt;</span> </span>
+<span id="cb5-344"><a href="#cb5-344"></a>  <span class="fu">html_elements</span>(<span class="st">"a"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb5-345"><a href="#cb5-345"></a>  <span class="fu">html_attr</span>(<span class="st">"href"</span>)</span>
+<span id="cb5-346"><a href="#cb5-346"></a></span>
+<span id="cb5-347"><a href="#cb5-347"></a><span class="co"># filter links if they end with ".csv"</span></span>
+<span id="cb5-348"><a href="#cb5-348"></a>csv_links <span class="ot">&lt;-</span> links[<span class="fu">str_detect</span>(links, <span class="st">".csv$"</span>)]</span>
+<span id="cb5-349"><a href="#cb5-349"></a></span>
+<span id="cb5-350"><a href="#cb5-350"></a><span class="co"># download all csv files</span></span>
+<span id="cb5-351"><a href="#cb5-351"></a><span class="cf">for</span> (u <span class="cf">in</span> csv_links) {</span>
+<span id="cb5-352"><a href="#cb5-352"></a>  <span class="fu">download.file</span>(u, <span class="fu">file.path</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/raw"</span>), <span class="fu">basename</span>(u)))</span>
+<span id="cb5-353"><a href="#cb5-353"></a>}</span>
+<span id="cb5-354"><a href="#cb5-354"></a><span class="in">```</span></span>
+<span id="cb5-355"><a href="#cb5-355"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span></span>
+<span id="cb5-356"><a href="#cb5-356"></a></span>
+<span id="cb5-357"><a href="#cb5-357"></a><span class="fu">## Langeweile?</span></span>
+<span id="cb5-358"><a href="#cb5-358"></a></span>
+<span id="cb5-359"><a href="#cb5-359"></a><span class="fu">### Weiterlesen / -hören</span></span>
+<span id="cb5-360"><a href="#cb5-360"></a><span class="ss">* </span>Storytelling:</span>
+<span id="cb5-361"><a href="#cb5-361"></a><span class="ss">  - </span>Sven Preger (2024): <span class="co">[</span><span class="ot">"Geschichten erzählen : Storytelling für Radio und Podcast"</span><span class="co">](https://d-nb.info/1309433496)</span></span>
+<span id="cb5-362"><a href="#cb5-362"></a><span class="ss">  - </span>BR kontrovers (2025): <span class="co">[</span><span class="ot">"Bauen im Überschwemmungsgebiet, Unterwegs mit der Dorfpolizei und mehr"</span><span class="co">](https://www.ardmediathek.de/video/kontrovers/bauen-im-ueberschwemmungsgebiet-unterwegs-mit-der-dorfpolizei-und-mehr/br/Y3JpZDovL2JyLmRlL2Jyb2FkY2FzdC9GMjAyNFdPMDE1NjE5QTA)</span></span>
+<span id="cb5-363"><a href="#cb5-363"></a><span class="ss">* </span>Datenjournalismus:</span>
+<span id="cb5-364"><a href="#cb5-364"></a><span class="ss">  - </span>Christina Elmer, Lorenz Matzat (Hrsg.): <span class="co">[</span><span class="ot">"Handbuch Daten und KI im Journalismus"</span><span class="co">](https://d-nb.info/1347471243)</span></span>
+<span id="cb5-365"><a href="#cb5-365"></a><span class="ss">* </span>Journalismus allgemein: </span>
+<span id="cb5-366"><a href="#cb5-366"></a><span class="ss">  - </span>Gabriele Hooffacker, Klaus Meier (2026): <span class="co">[</span><span class="ot">"La Roches Einführung in den praktischen Journalismus"</span><span class="co">](https://d-nb.info/1382295715)</span></span>
+<span id="cb5-367"><a href="#cb5-367"></a><span class="ss">  - </span>Maria Ressa (2022): <span class="co">[</span><span class="ot">"How to stand up to a dictator"</span><span class="co">](https://d-nb.info/1291085807)</span></span>
+<span id="cb5-368"><a href="#cb5-368"></a><span class="ss">  - </span>Podcast: Anja Reschke im Hotel Matze (2025): <span class="co">[</span><span class="ot">"Welche Aufgabe hat der Journalismus"</span><span class="co">](https://hotelmatze.podigee.io/469-anja-reschke)</span></span>
+<span id="cb5-369"><a href="#cb5-369"></a></span>
+<span id="cb5-370"><a href="#cb5-370"></a><span class="fu">### Ausprobieren</span></span>
+<span id="cb5-371"><a href="#cb5-371"></a><span class="ss">* </span>immer nett: Was waren die häufigsten Vornamen, z.B. in <span class="co">[</span><span class="ot">Rostock</span><span class="co">](https://www.govdata.de/suche/daten/vornamen-von-neugeborenen-2025)</span> oder <span class="co">[</span><span class="ot">Berlin</span><span class="co">](https://www.govdata.de/suche/daten/liste-der-haufigen-vornamen-in-berlin-2023)</span></span>
+<span id="cb5-372"><a href="#cb5-372"></a></span>
+<span id="cb5-373"><a href="#cb5-373"></a><span class="fu"># Introduction</span></span>
+<span id="cb5-374"><a href="#cb5-374"></a></span>
+<span id="cb5-375"><a href="#cb5-375"></a>Shared content appears in both outputs.</span>
+<span id="cb5-376"><a href="#cb5-376"></a></span>
+<span id="cb5-377"><a href="#cb5-377"></a><span class="ss">- </span>Shared point 1</span>
+<span id="cb5-378"><a href="#cb5-378"></a><span class="ss">- </span>Shared point 2</span>
+<span id="cb5-379"><a href="#cb5-379"></a></span>
+<span id="cb5-380"><a href="#cb5-380"></a>::: {.content-visible-when-format="html"}</span>
+<span id="cb5-381"><a href="#cb5-381"></a>This is **HTML-only** material: detailed explanations, extra references,</span>
+<span id="cb5-382"><a href="#cb5-382"></a>interactive content, or long derivations.</span>
+<span id="cb5-383"><a href="#cb5-383"></a>:::</span>
+<span id="cb5-384"><a href="#cb5-384"></a></span>
+<span id="cb5-385"><a href="#cb5-385"></a>::: {.content-visible-when-format="clean-typst"}</span>
+<span id="cb5-386"><a href="#cb5-386"></a>This is **slide-only** material: concise wording or notes intended for</span>
+<span id="cb5-387"><a href="#cb5-387"></a>the projected deck.</span>
+<span id="cb5-388"><a href="#cb5-388"></a>:::</span>
+<span id="cb5-389"><a href="#cb5-389"></a></span>
+<span id="cb5-390"><a href="#cb5-390"></a><span class="fu"># Data Example</span></span>
+<span id="cb5-391"><a href="#cb5-391"></a></span>
+<span id="cb5-394"><a href="#cb5-394"></a><span class="in">```{r}</span></span>
+<span id="cb5-395"><a href="#cb5-395"></a><span class="co">#| label: fig-data</span></span>
+<span id="cb5-396"><a href="#cb5-396"></a><span class="co">#| fig-cap: "Simple scatter plot"</span></span>
+<span id="cb5-397"><a href="#cb5-397"></a><span class="co">#| echo: true</span></span>
+<span id="cb5-398"><a href="#cb5-398"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb5-399"><a href="#cb5-399"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb5-400"><a href="#cb5-400"></a>y <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb5-401"><a href="#cb5-401"></a><span class="fu">plot</span>(x, y, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">"steelblue"</span>)</span>
+<span id="cb5-402"><a href="#cb5-402"></a><span class="fu">abline</span>(<span class="fu">lm</span>(y <span class="sc">~</span> x), <span class="at">col =</span> <span class="st">"darkred"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb5-403"><a href="#cb5-403"></a><span class="in">```</span></span>
+<span id="cb5-404"><a href="#cb5-404"></a></span>
+<span id="cb5-405"><a href="#cb5-405"></a>::: {.content-visible-when-format="clean-typst"}</span>
+<span id="cb5-406"><a href="#cb5-406"></a>The slope is approximately 2.</span>
+<span id="cb5-407"><a href="#cb5-407"></a>:::</span>
+<span id="cb5-408"><a href="#cb5-408"></a></span>
+<span id="cb5-409"><a href="#cb5-409"></a><span class="fu"># Appearing Elements</span></span>
+<span id="cb5-410"><a href="#cb5-410"></a></span>
+<span id="cb5-411"><a href="#cb5-411"></a>::: {.content-visible-when-format="clean-typst"}</span>
+<span id="cb5-412"><a href="#cb5-412"></a>Use native Typst/Touying code for overlays:</span>
+<span id="cb5-413"><a href="#cb5-413"></a></span>
+<span id="cb5-414"><a href="#cb5-414"></a><span class="in">```{=typst}</span></span>
+<span id="cb5-415"><a href="#cb5-415"></a><span class="in">#pause</span></span>
+<span id="cb5-416"><a href="#cb5-416"></a></span>
+<span id="cb5-417"><a href="#cb5-417"></a><span class="in">This appears after the first click.</span></span>
+<span id="cb5-418"><a href="#cb5-418"></a></span>
+<span id="cb5-419"><a href="#cb5-419"></a><span class="in">#pause</span></span>
+<span id="cb5-420"><a href="#cb5-420"></a></span>
+<span id="cb5-421"><a href="#cb5-421"></a><span class="in">This appears after the second click.</span></span>
+<span id="cb5-422"><a href="#cb5-422"></a><span class="in">```</span></span>
+<span id="cb5-423"><a href="#cb5-423"></a>:::</span>
+<span id="cb5-424"><a href="#cb5-424"></a></span>
+<span id="cb5-425"><a href="#cb5-425"></a><span class="co">&lt;!--</span></span>
+<span id="cb5-426"><a href="#cb5-426"></a></span>
+<span id="cb5-427"><a href="#cb5-427"></a><span class="co">::: {.content-visible-when-format="html"}</span></span>
+<span id="cb5-428"><a href="#cb5-428"></a></span>
+<span id="cb5-429"><a href="#cb5-429"></a><span class="co">![](../slides/slide-01.png)</span></span>
+<span id="cb5-430"><a href="#cb5-430"></a></span>
+<span id="cb5-431"><a href="#cb5-431"></a><span class="co">![](../slides/slide-02.png)</span></span>
+<span id="cb5-432"><a href="#cb5-432"></a></span>
+<span id="cb5-433"><a href="#cb5-433"></a><span class="co">:::</span></span>
+<span id="cb5-434"><a href="#cb5-434"></a><span class="co">--&gt;</span></span>
+<span id="cb5-435"><a href="#cb5-435"></a></span>
+<span id="cb5-436"><a href="#cb5-436"></a>::: {.carousel}</span>
+<span id="cb5-437"><a href="#cb5-437"></a></span>
+<span id="cb5-438"><a href="#cb5-438"></a><span class="al">![](../slides/slide-01.png)</span></span>
+<span id="cb5-439"><a href="#cb5-439"></a><span class="al">![](../slides/slide-02.png)</span></span>
+<span id="cb5-440"><a href="#cb5-440"></a></span>
+<span id="cb5-441"><a href="#cb5-441"></a>:::</span>
+<span id="cb5-442"><a href="#cb5-442"></a></span>
+<span id="cb5-443"><a href="#cb5-443"></a>::: {.content-visible when-format="clean-typst"}</span>
+<span id="cb5-444"><a href="#cb5-444"></a></span>
+<span id="cb5-445"><a href="#cb5-445"></a><span class="in">```{=typst}</span></span>
+<span id="cb5-446"><a href="#cb5-446"></a><span class="in">“Eine Geschichte besteht in aller Regel aus drei Basis-Elementen: eine aktiv-handelnde Person, ein konkretes Ziel und (etliche) Widerstände.</span></span>
+<span id="cb5-447"><a href="#cb5-447"></a><span class="in">```</span></span>
+<span id="cb5-448"><a href="#cb5-448"></a>:::</span>
+</code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Julia Barthel</p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">
+<p>CC-BY</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
