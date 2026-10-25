@@ -104,7 +104,7 @@
     "href": "session_notes/2026-10-22_tools.html#übung-hundebiss-statistik-berlin-2024",
     "title": "01 Tools",
     "section": "🏋 Übung: Hundebiss-Statistik Berlin 2024",
-    "text": "🏋 Übung: Hundebiss-Statistik Berlin 2024\n\n\n\n\n\n“Gestern hat ein Hund einen Menschen schwer verletzt. Passiert sowas eigentlich öfter?”\n\n1. 🔍 Datenrecherche: Welche Daten gibt es?\n\n\nSuchtipps anzeigen\n\n\nSuchmaschine → Website Berlin\ngovdata.de → Datensatz zum Download\n\n\n\nWir mögen CSV-Dateien\n\ngrößter Vorteil: klein\nsehr schlicht, können eigentlich alle Programme öffnen\nNachteil: speichern keinen Kontext\n\n\n\n\n2. 📐 Quellenkritik: Was können die Daten sagen, was nicht?\n\nWas sind die aktuellsten verfügbaren Daten – in welchen Zyklen werden frische Daten veröffentlicht?\nKönnte es ein, dass bis zur geplanten Veröffentlichung aktualisierte Daten bereitstehen?\nWie zuverlässig sind die Daten – kommen sie möglichst direkt von der Erhebungsstelle?\nWas wissen wir über die Daten – gibt es Kontext-Informationen?\n\n\n\n3. 🤔 Hypothesen finden: “Drehbuch der Recherche”\n\nWelche Hunde haben die meisten Menschen verletzt?\nWelche Hunde haben im Verhältnis zu allen Menschen, die sie verletzt haben, die meisten Menschen schwer verletzt?\nWelche Hunde, die nicht als gefährlich gelten, haben mehr Menschen verletzt, als solche, die als gefährlich gelten?\n\n\n\n4. 🛠 Daten analysieren: Hypothesen prüfen\n\nHier: Summen bilden, Anteile ausrechnen\n\n\n\n5. 💬 Daten einordnen lassen: Interviews & Hintergrund\n\nGibt es einen Kontakt zur datenveröffentlichenden Stelle – wer ist fachlich zuständig?\nWelche Expert*innen beschäftigen sich noch mit den Daten und können in einem Hintergrundgespräch die Methodik einordnen?\n\n\n\n6. ✍️ Veröffentlichung planen: Grafiken entwerfen, texten\n\nWas ist interessant?\nDie richtige Grafik zur Aussage finden: \n\n🔗 The Visual Vocabulary, developed and published by Financial Times (FT)\n🔗 Datawrapper: “A friendly guide to choosing a chart type”\n🔗 Storytelling with Data: “SWD Chart Guide”\n\nEmpfehlung für Visualisierungen: Datawrapper\n\n\n\n7. 👀 Ergebnisse verifizieren: mindestens 4-Augen-Check\n\nAussagen auf Plausibilität prüfen\ndokumentierte Schritte nachvollziehen\n\n\n\n\n\n\n\nWarnungWie lange dauert’s denn nun?\n\n\n\nInoffizielle Faustregel 😉: Doppelt so lange, wie du denkst + 1 Tag.",
+    "text": "🏋 Übung: Hundebiss-Statistik Berlin 2024\n\n\n\n\n\n“Gestern hat ein Hund einen Menschen schwer verletzt. Passiert sowas eigentlich öfter?”\n\n1. 🔍 Datenrecherche: Welche Daten gibt es?\n\n\nSuchtipps anzeigen\n\n\nSuchmaschine → Website Berlin\ngovdata.de → Datensatz zum Download\n\n\n\nWir mögen CSV-Dateien\n\ngrößter Vorteil: klein\nsehr schlicht, können eigentlich alle Programme öffnen\nNachteil: speichern keinen Kontext\n\n\n\n\n2. 📐 Quellenkritik: Was können die Daten sagen, was nicht?\n\nWas sind die aktuellsten verfügbaren Daten – in welchen Zyklen werden frische Daten veröffentlicht?\nKönnte es ein, dass bis zur geplanten Veröffentlichung aktualisierte Daten bereitstehen?\nWie zuverlässig sind die Daten – kommen sie möglichst direkt von der Erhebungsstelle?\nWas wissen wir über die Daten – gibt es Kontext-Informationen?\n\n\n\n3. 🤔 Hypothesen finden: “Drehbuch der Recherche”\n\nWelche Hunde haben die meisten Menschen verletzt?\nWelche Hunde haben im Verhältnis zu allen Menschen, die sie verletzt haben, die meisten Menschen schwer verletzt?\nWelche Hunde, die nicht als gefährlich gelten, haben mehr Menschen verletzt, als solche, die als gefährlich gelten?\n\n\n\n4. 🛠 Daten analysieren: Hypothesen prüfen\n\nHier: Summen bilden, Anteile ausrechnen\n\n\n\n5. 💬 Daten einordnen lassen: Interviews & Hintergrund\n\nGibt es einen Kontakt zur datenveröffentlichenden Stelle – wer ist fachlich zuständig?\nWelche Expert*innen beschäftigen sich noch mit den Daten und können in einem Hintergrundgespräch die Methodik einordnen?\n\n\n\n6. ✍️ Veröffentlichung planen: Grafiken entwerfen, texten\n\nWas ist interessant?\nDie richtige Grafik zur Aussage finden: \n\n🔗 The Visual Vocabulary, developed and published by Financial Times (FT)\n🔗 Datawrapper: “A friendly guide to choosing a chart type”\n🔗 Storytelling with Data: “SWD Chart Guide”\n\nEmpfehlung für Visualisierungen: Datawrapper\n\n\n\n7. 👀 Ergebnisse verifizieren: mindestens 4-Augen-Check\n\nAussagen auf Plausibilität prüfen\ndokumentierte Schritte nachvollziehen",
     "crumbs": [
       "01 Tools"
     ]
@@ -278,7 +278,7 @@
     "href": "session_notes/2026-10-29_data.html",
     "title": "02 Daten",
     "section": "",
-    "text": "tbd",
+    "text": "Theorie:\n\nWiederholung Grundprinzipien der Datenarbeit (Zeit- und Projektplanung)\nDatenquellen, Lizenzen & Open Data\n\nPraxis:\n\nTabelle aus PDF extrahieren\n\nTechnik:\n\nDateiformate: Tabellen in PDF & html\nTools: Tabula, Developertools\n\nDaten:\n\nHundebiss-Statistik Berlin & Rheinland-Pfalz :::",
     "crumbs": [
       "02 Daten"
     ]
@@ -331,6 +331,96 @@
     "text": "tbd",
     "crumbs": [
       "08 Multimedia"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-29_data.html#datenquellen",
+    "href": "session_notes/2026-10-29_data.html#datenquellen",
+    "title": "02 Daten",
+    "section": "Datenquellen",
+    "text": "Datenquellen\n\n\n\n\n\n\nStatistisches Bundesamt\nStatistische Landesämter\ngovdata.de – Daten von Behörden, Kommunen, etc.\nDrucksachen Bundestag\nGoogle Dataset Search",
+    "crumbs": [
+      "02 Daten"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-29_data.html#übung-hundebiss-statistik-rheinland-pfalz-2024",
+    "href": "session_notes/2026-10-29_data.html#übung-hundebiss-statistik-rheinland-pfalz-2024",
+    "title": "02 Daten",
+    "section": "🏋 Übung: Hundebiss-Statistik Rheinland-Pfalz 2024",
+    "text": "🏋 Übung: Hundebiss-Statistik Rheinland-Pfalz 2024\n\n\nSuchtipps anzeigen\n\n\nGoogle-Suche: “innenministerium rheinland pfalz hund filetype:pdf 2024”\n🔗\n\n\n\n\nBeispiel-Bericht anzeigen\n\n“Zahl der Verletzten durch Hundebisse in Berlin zurückgegangen” rbb24.de",
+    "crumbs": [
+      "02 Daten"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-29_data.html#tools-um-tabellen-aus-pdfs-zu-extrahieren",
+    "href": "session_notes/2026-10-29_data.html#tools-um-tabellen-aus-pdfs-zu-extrahieren",
+    "title": "02 Daten",
+    "section": "Tools, um Tabellen aus PDFs zu extrahieren",
+    "text": "Tools, um Tabellen aus PDFs zu extrahieren\n\ntabula Download oder gehostet (öffentlich!!)\nmit der Programmiersprache Python: camelot / excalibur\nfür komplexere Dokumente, Python-Kenntnisse nötig: docling",
+    "crumbs": [
+      "02 Daten"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-29_data.html#wie-finde-ich-tools",
+    "href": "session_notes/2026-10-29_data.html#wie-finde-ich-tools",
+    "title": "02 Daten",
+    "section": "Wie finde ich Tools?",
+    "text": "Wie finde ich Tools?\n\nalternativeto.net: Einstellungen: “Open Source” + eigenes Betriebssystem\ngithub.com: Code-Plattform (gehört Microsoft), die kuratierte “awesome”-Listen hat, z.B. https://github.com/topics/awesome-list\nabgucken bei anderen:\n\nDeutsche Welle Datenteam,\nBayerische Digitalagentur Byte Bayern\n30DayMapChallenge, 30DayChartChallenge",
+    "crumbs": [
+      "02 Daten"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-29_data.html#übung-hundebiss-statistik-berlin-über-die-jahre",
+    "href": "session_notes/2026-10-29_data.html#übung-hundebiss-statistik-berlin-über-die-jahre",
+    "title": "02 Daten",
+    "section": "🏋 Übung: Hundebiss-Statistik Berlin über die Jahre",
+    "text": "🏋 Übung: Hundebiss-Statistik Berlin über die Jahre\n\n\n\n\n\nWir erinnern uns: Auf govdata.de gab es Datensätze bis 2016 zurück…\nHerausforderungen: - wir müssen die alle runterladen (= scraping) - idealerweise brauchen wir das in einer Datei (= coding)\n\nSchritt 1: Links zu csv-Dateien sammeln\n\nBrowser öffnen + Developer-Tools ausklappen (Win/Linux: Ctrl + Shift + I or F12; macOS: Cmd + Opt + I)\nGanz links in der Ecke auf das Icon mit Rechteck und Cursor klicken (Win/Linux: Ctrl + Shift + C; macOS: Cmd + Opt + C)\njetzt zu einem csv-Button navigieren und anklicken\n\n\n\nSchritt 3: R installieren\nR-Download\n\n\nSchritt 4: RStudio installieren\nRStudio-Download\n\n\nSchritt 5: R-Projekt anlegen\nEmpfehlung für eine Ordnerstruktur:\n├── code\n├── data\n│   ├── raw\n│   ├── helpers\n│   ├── processed\n│   └── final\n└── report\n    ├── img\n    └── docs\nanlegen:\n\nAnwendung “Terminal” suchen → öffnen\nein paar Befehle ausprobieren:\n\n\nls -l listet alle Ordner und Dateien auf, mit ein paar Metadaten\ncd /hier/ein/pfad/zum/ordner springt zu einem Ordner\npwd zeigt an, in welchem Ordner man sich gerade befindet\nalle Ordner wie oben anlegen: 🪄\n\nmkdir -p code data/raw data/helpers data/processed data/final report/img report/docs\n\n\nSchritt 6: Code kopieren, ausführen, glücklich werden\n\n\nCode anzeigen\n\n\n# load libraries\nlibrary(stringr)\n\n# read html\nhtml &lt;- read_html(\"https://www.govdata.de/suche/daten/hundebiss-statistik-berlin\")\n\n# extract all links\nlinks &lt;- html |&gt; \n  html_elements(\"a\") |&gt; \n  html_attr(\"href\")\n\n# filter links if they end with \".csv\"\ncsv_links &lt;- links[str_detect(links, \".csv$\")]\n\n# download all csv files\nfor (u in csv_links) {\n  download.file(u, file.path(here::here(\"data/raw\"), basename(u)))\n}",
+    "crumbs": [
+      "02 Daten"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-29_data.html#worum-es-heute-geht",
+    "href": "session_notes/2026-10-29_data.html#worum-es-heute-geht",
+    "title": "02 Daten",
+    "section": "",
+    "text": "Theorie:\n\nWiederholung Grundprinzipien der Datenarbeit (Zeit- und Projektplanung)\nDatenquellen, Lizenzen & Open Data\n\nPraxis:\n\nTabelle aus PDF extrahieren\n\nTechnik:\n\nDateiformate: Tabellen in PDF & html\nTools: Tabula, Developertools\n\nDaten:\n\nHundebiss-Statistik Berlin & Rheinland-Pfalz :::",
+    "crumbs": [
+      "02 Daten"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-29_data.html#beispiel-warum-sich-immer-mehr-menschen-krankmelden",
+    "href": "session_notes/2026-10-29_data.html#beispiel-warum-sich-immer-mehr-menschen-krankmelden",
+    "title": "02 Daten",
+    "section": "Beispiel: “Warum sich immer mehr Menschen krankmelden”",
+    "text": "Beispiel: “Warum sich immer mehr Menschen krankmelden”\nvon Sophie Menner, Julia Barthel, Kirsten Girschick, Josef Schön\nbr24.de / tagesschau.de\n\n\n\n\n\n\n\n\n\n\n\nWarnungWie lange dauert’s denn nun?\n\n\n\nInoffizielle Faustregel 😉: Doppelt so lange, wie du denkst + 1 Tag.",
+    "crumbs": [
+      "02 Daten"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-29_data.html#wo-kann-man-nach-daten-stöbern",
+    "href": "session_notes/2026-10-29_data.html#wo-kann-man-nach-daten-stöbern",
+    "title": "02 Daten",
+    "section": "Wo kann man nach Daten stöbern?",
+    "text": "Wo kann man nach Daten stöbern?\n\n\n\n\n\n\n“Data Is Plural”, leider eingestellter Podcast + Newsletter, Archiv\nGitHub, z.B. Suche nach “awesome dataset”\nTidyTuesday, wöchentliche Challenge, die sich vor allem auf R bezieht\nkaggle as as very popular platform for data science (but I don’t like it, to me it seems often a bit… contextless?)\nreddit\nOur World in Data\ninternational / Ländervergleich: generell UN-Daten\n\nWeltgesundheitsorganisation WHO\nHumanitäre Daten der UN-Organisation OCHA\n\n\n\nWelche Daten dürfen wir benutzen?\n“Open Data” ist ein feststehender Begriff seit vielen Jahren. In Deutschland gibt es dafür verschiedenste Regelungen, aber keine umfassende Verpflichtung, dass öffentliche Einrichtungen offene Daten verfügbar machen müssen. Dabei bedeutet das, dass man Daten frei nutzen kann, ohne weitere Einschränkungen:\n\n“Open means anyone can freely access, use, modify, and share for any purpose (subject, at most, to requirements that preserve provenance and openness).”\nhttps://opendefinition.org/\n\nIn der Praxis ist das in Deutschland oft anders umgesetzt und die datenveröffentlichende Stelle verlangt ihre Nennung. Das regelt die jeweilige Lizenz:\n\n“Gemeinfreiheit” CCO\nCC BY 4.0\n“Datenlizenz Deutschland” BY, Zero\n\ngovdata.de rät zu CC-Lizenzen",
+    "crumbs": [
+      "02 Daten"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-10-29_data.html#übung-musik-us-charts",
+    "href": "session_notes/2026-10-29_data.html#übung-musik-us-charts",
+    "title": "02 Daten",
+    "section": "Übung: Musik – US-Charts",
+    "text": "Übung: Musik – US-Charts\nSeit 1958 veröffentlicht das US-Magazin “Billboard” jeden Dienstag die “beliebtesten” Songs – basierend auf Verkäufen, Airplay und Streaming der jeweiligen Erfassungswoche. Alle Top-Titel hat Chris Dalla Riva für seinen Blog und sein Buch zusammengetragen und freundlicherweise als Google-Tabelle veröffentlicht: Billboard Hot 100 Number Ones Database.\n→ Welche Geschichten lassen sich darin finden?\n\n\n\n\n\nEin Beispiel für eine Musik-Geschichte:\n\nThe Pudding, “Love Songs, RIP”",
+    "crumbs": [
+      "02 Daten"
     ]
   }
 ]
