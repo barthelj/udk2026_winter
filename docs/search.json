@@ -187,6 +187,13 @@
     "text": "References"
   },
   {
+    "objectID": "readme.html",
+    "href": "readme.html",
+    "title": "",
+    "section": "",
+    "text": "Geschichten in Daten – finden und erzählen\nMaterial zum Seminar an der UdK Berlin"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Seminarübersicht",
@@ -281,28 +288,40 @@
     "href": "session_notes/2026-10-15_intro.html",
     "title": "00 Einführung",
     "section": "",
-    "text": "Wir lernen mit vielen praktischen Übungen und kompaktem theoretischem Input, wie man Geschichten in Daten findet. Dazu lernen wir unsere Rechner und das Internet besser kennen. Insbesondere schauen wir uns an, wie und wo man Daten findet, wie man eigene Datensätze erstellt und wie man Erkenntnisse aus Daten kommuniziert.\nWichtig: Wir versuchen uns auch an Visualisierungen. Weil es dazu aber viele andere Kurse gibt, konzentrieren wir uns darauf, die richtige Visualisierung auszuwählen und zu lernen, wie wir Daten dafür strukturieren.\n\n\n\n\n\n🌍 Das Wissen ist da – ich helfe euch dabei, es zu verstehen und anwenden zu können.\n🪑 Die Idee: Wir nutzen die Zeit im Seminarraum möglichst gut, damit ihr rausgeht und die Grundlagen sicher beherrscht.\n🚀 Wer mehr will: Ich empfehle euch Ressourcen und Material, um noch tiefer einzusteigen."
+    "text": "Wir lernen mit vielen praktischen Übungen und kompaktem theoretischem Input, wie man Geschichten in Daten findet. Dazu lernen wir unsere Rechner und das Internet besser kennen. Insbesondere schauen wir uns an, wie und wo man Daten findet, wie man eigene Datensätze erstellt und wie man Erkenntnisse aus Daten kommuniziert.\nWichtig: Wir versuchen uns auch an Visualisierungen. Weil es dazu aber viele andere Kurse gibt, konzentrieren wir uns darauf, die richtige Visualisierung auszuwählen und zu lernen, wie wir Daten dafür strukturieren.\n\n\n\n\n\n🌍 Das Wissen ist da – ich helfe euch dabei, es zu verstehen und anwenden zu können.\n🪑 Die Idee: Wir nutzen die Zeit im Seminarraum möglichst gut, damit ihr rausgeht und die Grundlagen sicher beherrscht.\n🚀 Wer mehr will: Ich empfehle euch Ressourcen und Material, um noch tiefer einzusteigen.",
+    "crumbs": [
+      "00 Einführung"
+    ]
   },
   {
     "objectID": "session_notes/2026-10-15_intro.html#was-machen-wir-in-diesem-seminar",
     "href": "session_notes/2026-10-15_intro.html#was-machen-wir-in-diesem-seminar",
     "title": "00 Einführung",
     "section": "",
-    "text": "Wir lernen mit vielen praktischen Übungen und kompaktem theoretischem Input, wie man Geschichten in Daten findet. Dazu lernen wir unsere Rechner und das Internet besser kennen. Insbesondere schauen wir uns an, wie und wo man Daten findet, wie man eigene Datensätze erstellt und wie man Erkenntnisse aus Daten kommuniziert.\nWichtig: Wir versuchen uns auch an Visualisierungen. Weil es dazu aber viele andere Kurse gibt, konzentrieren wir uns darauf, die richtige Visualisierung auszuwählen und zu lernen, wie wir Daten dafür strukturieren.\n\n\n\n\n\n🌍 Das Wissen ist da – ich helfe euch dabei, es zu verstehen und anwenden zu können.\n🪑 Die Idee: Wir nutzen die Zeit im Seminarraum möglichst gut, damit ihr rausgeht und die Grundlagen sicher beherrscht.\n🚀 Wer mehr will: Ich empfehle euch Ressourcen und Material, um noch tiefer einzusteigen."
+    "text": "Wir lernen mit vielen praktischen Übungen und kompaktem theoretischem Input, wie man Geschichten in Daten findet. Dazu lernen wir unsere Rechner und das Internet besser kennen. Insbesondere schauen wir uns an, wie und wo man Daten findet, wie man eigene Datensätze erstellt und wie man Erkenntnisse aus Daten kommuniziert.\nWichtig: Wir versuchen uns auch an Visualisierungen. Weil es dazu aber viele andere Kurse gibt, konzentrieren wir uns darauf, die richtige Visualisierung auszuwählen und zu lernen, wie wir Daten dafür strukturieren.\n\n\n\n\n\n🌍 Das Wissen ist da – ich helfe euch dabei, es zu verstehen und anwenden zu können.\n🪑 Die Idee: Wir nutzen die Zeit im Seminarraum möglichst gut, damit ihr rausgeht und die Grundlagen sicher beherrscht.\n🚀 Wer mehr will: Ich empfehle euch Ressourcen und Material, um noch tiefer einzusteigen.",
+    "crumbs": [
+      "00 Einführung"
+    ]
   },
   {
     "objectID": "session_notes/2026-10-15_intro.html#semesterplan",
     "href": "session_notes/2026-10-15_intro.html#semesterplan",
     "title": "00 Einführung",
     "section": "Semesterplan",
-    "text": "Semesterplan\n\n\n\nDatum\nThema\nLink\n\n\n\n\n15.10.2026\nEinführung\nKapitel\n\n\n22.10.2026\nWorkflow & Werkzeuge\nKapitel\n\n\n29.10.2026\nIch habe Daten, was jetzt?\nKapitel\n\n\n05.11.2026\nIch habe eine Frage, aber keine Daten – was jetzt?\nKapitel\n\n\n12.11.2026\nWie funktionieren Terminal & Server\nKapitel\n\n\n19.11.2026\nRaum für eigene Ideen\nKapitel\n\n\n26.11.2026\nArbeit mit Kartendaten\nKapitel\n\n\n03.12.2026\nElemente des Storytelling\nKapitel\n\n\n10.12.2026\nBild und Text, Audio und Video als Datenquelle\nKapitel\n\n\n17.12.2026\nEigene Ideen umsetzen\nKapitel\n\n\n07.01.2027\nTexten in und um Grafiken herum\nKapitel\n\n\n14.01.2027\nWie funktionieren Datenbanken\nKapitel\n\n\n21.01.2027\nNIAM\nKapitel\n\n\n28.01.2027\ntba\nKapitel\n\n\n04.02.2027\ntba\nKapitel\n\n\n11.02.2027\ntba\nKapitel"
+    "text": "Semesterplan\n\n\n\nDatum\nThema\nLink\n\n\n\n\n15.10.2026\nEinführung\nKapitel\n\n\n22.10.2026\nWorkflow & Werkzeuge\nKapitel\n\n\n29.10.2026\nIch habe Daten, was jetzt?\nKapitel\n\n\n05.11.2026\nIch habe eine Frage, aber keine Daten – was jetzt?\nKapitel\n\n\n12.11.2026\nWie funktionieren Terminal & Server\nKapitel\n\n\n19.11.2026\nRaum für eigene Ideen\nKapitel\n\n\n26.11.2026\nArbeit mit Kartendaten\nKapitel\n\n\n03.12.2026\nElemente des Storytelling\nKapitel\n\n\n10.12.2026\nBild und Text, Audio und Video als Datenquelle\nKapitel\n\n\n17.12.2026\nEigene Ideen umsetzen\nKapitel\n\n\n07.01.2027\nTexten in und um Grafiken herum\nKapitel\n\n\n14.01.2027\nWie funktionieren Datenbanken\nKapitel\n\n\n21.01.2027\nNIAM\nKapitel\n\n\n28.01.2027\ntba\nKapitel\n\n\n04.02.2027\ntba\nKapitel\n\n\n11.02.2027\ntba\nKapitel",
+    "crumbs": [
+      "00 Einführung"
+    ]
   },
   {
     "objectID": "session_notes/2026-10-15_intro.html#eckpunkte-erwartungen",
     "href": "session_notes/2026-10-15_intro.html#eckpunkte-erwartungen",
     "title": "00 Einführung",
     "section": "Eckpunkte – Erwartungen",
-    "text": "Eckpunkte – Erwartungen\nIn der Einführungssitzung haben wir darüber gesprochen, was ihr euch wünscht – daran werde ich das Angebot ausrichten."
+    "text": "Eckpunkte – Erwartungen\nIn der Einführungssitzung haben wir darüber gesprochen, was ihr euch wünscht – daran werde ich das Angebot ausrichten.",
+    "crumbs": [
+      "00 Einführung"
+    ]
   },
   {
     "objectID": "session_notes/2026-12-10_multimedia.html",
