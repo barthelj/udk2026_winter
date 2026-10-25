@@ -1584,7 +1584,7 @@ endobj
 <<
   /Type /Font
   /Subtype /Type0
-  /BaseFont /SYBLKN+Roboto-Light
+  /BaseFont /GXPKTY+Roboto-Light
   /Encoding /Identity-H
   /DescendantFonts [140 0 R]
   /ToUnicode 143 0 R
@@ -1595,7 +1595,7 @@ endobj
 <<
   /Type /Font
   /Subtype /CIDFontType2
-  /BaseFont /SYBLKN+Roboto-Light
+  /BaseFont /GXPKTY+Roboto-Light
   /CIDSystemInfo <<
     /Registry (Adobe)
     /Ordering (Identity)
@@ -1604,26 +1604,26 @@ endobj
   /FontDescriptor 142 0 R
   /DW 0
   /CIDToGIDMap /Identity
-  /W [0 0 443.35938 1 1 554.6875 2 2 243.65234 3 3 568.84766 4 4 224.60938 5 5 549.8047 6 6 331.0547 7 8 549.3164 9 9 336.91406 10 10 549.3164 11 11 555.1758]
+  /W [0 0 443.35938 1 1 554.6875 2 2 243.65234 3 3 266.60156 4 4 549.8047 5 5 321.77734 6 6 336.91406 7 7 560.5469]
 >>
 endobj
 
 141 0 obj
 <<
-  /Length 10
+  /Length 9
   /Filter /FlateDecode
 >>
 stream
-xœûÿ øø
+xœû   
 endstream
 endobj
 
 142 0 obj
 <<
   /Type /FontDescriptor
-  /FontName /SYBLKN+Roboto-Light
+  /FontName /GXPKTY+Roboto-Light
   /Flags 131076
-  /FontBBox [30.761719 -210.9375 532.22656 760.2539]
+  /FontBBox [11.71875 -9.765625 516.1133 721.1914]
   /ItalicAngle 0
   /Ascent 1047.8516
   /Descent -270.9961
@@ -1636,7 +1636,7 @@ endobj
 
 143 0 obj
 <<
-  /Length 760
+  /Length 703
   /Type /CMap
   /WMode 0
 >>
@@ -1663,18 +1663,14 @@ end def
 1 begincodespacerange
 <0000> <FFFF>
 endcodespacerange
-11 beginbfchar
+7 beginbfchar
 <0001> <0030>
 <0002> <0020>
-<0003> <0045>
-<0004> <0069>
-<0005> <006E>
-<0006> <0066>
-<0007> <00FC>
-<0008> <0068>
-<0009> <0072>
-<000A> <0075>
-<000B> <0067>
+<0003> <0049>
+<0004> <006E>
+<0005> <0074>
+<0006> <0072>
+<0007> <006F>
 endbfchar
 endcmap
 CMapName currentdict /CMap defineresource pop
@@ -1687,17 +1683,14 @@ endobj
 
 144 0 obj
 <<
-  /Length 1270
+  /Length 1024
   /Filter /FlateDecode
 >>
 stream
-xœu•klU†ŸsÎÌnÛÒ)-E!d»+[‚ÒÛÒ–¬•‹…r©•¥»´…İné.° 0„D”b¸c@$EÅ„å‡áPà‡Á˜ho"ÌÖÌ°![Ño23ïÉœïıùÎ™Èb
-š"+66Ñ†”æ<ª¨nnGÿ×@uÏ4GÉ²"G´<`t$ÖÔ~Ó?m"04L¶Q!Ê@›¸[ƒÑğØÖEçA[òj[,èç\ë9º¥Õı
-Ù¸ ~£ØÈ–Jº!T±ÉÓæ‡B
-ñƒÈ7
-×m©R½ú‘¿§ë+Í=²Ál0WéY®y2i6È${»Õ=½‹†€È“^TF^¾¿2 s´Ïëq8kT¥îı|éü]í—‹ºµåû÷íÙ+ìİ¿GÎOL#E•è'Æ‹òÔõÔYGÊüë^êûTèß‚ã ½¨¡¿Í[Xœ>«uïÉƒæ\•«i1o´˜‡›‘lĞOã´æí¯,,ğzŠ¯±mæ¬Y37/×ã3fLûéÁ-`yw€:§Me Ökø‹ª«ı•ƒ¬ŸOÎY½Û›Œkc%v})’bƒúqçs°ø¢>vì’gö¯B0äQG!… Š¯á­òWY.EN«……Å2š2—wvŠO¶L¬Í®x!Ø&”ºöp„º¶à=‡kå’õôö²½·[}£wIı '.6ğ˜ÒA&¥ñerLgHæÛóZ3(;@nÕ¦’›ù®6¤¿bÛ°äR5ÿB¹[+S7Ö/6iO¸¢NÄ#*-@>—8¼_‰á7
-ù+«k¿¡^U‘îºDrKÓ»;†%7ìüê;yÜ|ùĞÚõÊxpI45]]Ö¦ò4#¬Ê¾’+·ªÊáõÈ’ªÑùşÊ¢¿QàÖN©®1|>¯GJOøÒ„º·~p0qãäMuëÔ­¸ŞvÇLíØûæû%÷Öíß‘šşzıäÏ÷®Ş-Fİ)~(ıtÇƒë—~U_ŸHõ¶ÏÎZ›J@²Q.oë]èä@¾¿²ÀëŞ­=!YW½k×´3¦a}³Ò;»8xõæj{x*+NßíÉµîW^Ù7ä~­y%¯>+d#íÇÖ*áŒ¤\`¸_û°"oí”9j!­¤ø´ÍgÙ¦-¤C`œf»¦C¥ÃÖKˆª%lFRO=q6rˆ‹Üˆ¡¢V¬[í
-9\c³±V*36Y.‡Q-h€´¦!­%¹,KkE9ëÒZË˜£ã£3­æÛ´v2ßÓ:—¨Lël|blZ÷§@„ÒÚ•¡s¨É´Îe¶¸L1ÚXA;-4ÑL7•”SAn^"FŒ&"„q3™V)ÅÍ"Dp3óqVÜ…‰¦e„	QÊLb, F‚n¦<mÍlb)‚´÷©øßœ@š«†9v8-ÄhµyK©ÀÏL_ÓÇgTŸÚ™ş-6y7	Ú	"LÔ¦ZŒ›ÿÕ…Ò>£:šíÎÅIĞBĞ¦yäoZ]±ûæ7#jó4¦ÕîX7Kiµ«·Û,ÍvÇ'ĞFÆô¨oÎs¸ÿ³åö[&h#@e,·R‚^¥Äh§‰2"}<ã”1…ÉÔ1‰©Ìb£ÒÖ.¶£w‘õO{2şX»¡|
+xœu”]lU†Ÿsfö§t)ş+‰ºfCºmw»´Y!Ä@°,Ü´©l»Ûna·³ÙİÂV‰ñ‚Ä˜à•zc0ÑFol‰&Åx!öF 4£@ÄF‹$jm+îÔÌtBº¨g.æ=sÎ÷~Ï¼99ÀË(0œZwpb8âÏd"WTÏg O[“ÉDLs—yx<™ÎíTzA~è)c0&3â,3¨JÇ
+¶ˆPj¬õÑX:±môÈUPÚA~™1rù•4qpû¬u\–V6»¦PpS†Ö6ieRšKÊ&——Š¯)Ä¢ªøğ}/sÅ5õ×~×³Å	Ù_ì/py}÷+e¡Ø/ûARX™W]Ÿ³ *¥¿Q*ZeU8TUíiøİ­ÆšE”Å_®_½§ş:{m^=~îìÄùö™sò°ù©yE4‰ˆX'¶‹Vókó²Û,.-šß-˜¢|s öÙÜÍ¯‰}ÏÙHSÖÚiP®¨İTƒ°šùµpıÖ­áP]½æ×yèù·ü…œÚy!ÿæÇ¢ ^R~|c Ø F?ê3.\/FåÌ¹Væå×~jÁåö7"š?ÖÂZ¸Ö¯ÕÔ…CrOğ@òäÌÌø;;6GÕÊñ3òÚ€¨3(¶fw”¯’ÈWÕn*Ö’„Cõ€Ü>şÚc…1åğµV]mQn¿x´X§FßıÄ—ö é]™W7©İ«	V·Q_[ƒ¿‘Hx5ºH»km¯ğŞ¼%ÜŠ¹|ë¶¹T˜~rúâÔä´lsö§¦»æeÑ~÷¼¹$¼çõIá3ÿ˜²NŠu¥¿g¨k6ñÌ†®ñZ_¹to¡ÂzßxêìÆå®âÊ>o(CÚËv'eú@Û°Üõw[e¯í´vx•SÄÕñ;ÈFæÔ!NËWhpZ=A/ĞD}áe&ù‚û—¯¨£ÏCn»{ï¡ Ô2 -h ßÑ’
+9Z¡•“V×ìqàCG»ià¦£=lç7G{ñ‰£Ëˆm.§FÄí[£×Ó'
+® GÌ±ƒãda˜$ytB´ÒF:Ob`0LŠ:»e :;H‘BçÀƒªœ=K#A–c$ˆä ä1ĞÙû`·µs˜1RÄÈ–t‰şoMÔáêàİ#Ç£6o6ÂtòÄúŸæ’ŞkıGlò:y²Äˆ“ mSEÇ`è¡‚%³$íärä!fÓ¬ú[„V*aiı i›g£vbqtÆµ»gm–¤ø2Ätf¥5[Ğÿ3‰Vû/ódˆÒBÇí'HlWƒ,Ã´*ñÌÑÂ^v³“]tó4»hv<kVX÷ğ¿Ç?54?É
 endstream
 endobj
 
@@ -2617,11 +2610,13 @@ endobj
 
 192 0 obj
 <<
-  /Length 276
+  /Length 274
   /Filter /FlateDecode
 >>
 stream
-xœ’Akƒ@…ïó+æXug×UWhRÚB %{Kr0F[ºÖlı÷EÑ”CK/óíÌ[ŞğØ¢µe‘fg3@dkÓì=?â–iÓì»Ñæó`¿šÙcó¶é¾IßÊ:µ¥©a>Çx™Àj Û4i=l['OK¤Qı „„÷%¡‘ë“òÌ*`avr)”>EŠ#¹¤„ç‹HöÏ@„ÒçxÊjˆ5êXA(êâgm]ÁönGD;"~E1Ğ(úƒaÏC_m_ëËŸÜsö¨Ÿa¥áuÚ5ŸvÍ}ér©<õ×ıÉµpGx=={wP†gu¼Àx¡i5¸v};=±±ÖT—z0Æş o×R`
+xœ’MKÃ@„ïï¯˜£9˜}w³›(…~‰
+¥{k{ˆi¢9äÃv=øï¥%©XRO³;Ã>ËˆÉŞ•Eš9ŒFˆ‰siö–ï°¶i·Gkõñâ>Ûâ>OwùşhÙÓı)}-ëÔ•MMã1¦ó-–3«6­»¶åìaîÓw’`0n%4C©Ä7!²ŠDÆÈÄ>GÚpK°Ï±
+ŒJôéªH‰CVÓÔÃîIÃßµG±­o6Ì¼a–ª::ÕšNC‰…&T}Gämaiaéy˜OóI£}©ã ş?Ÿ„â?ñ)29¿¸wÏ”ttN{Öş/†Óğ’úúN¦sMõs*wMã~Êz–Â
 endstream
 endobj
 
@@ -4792,21 +4787,21 @@ endobj
 
 241 0 obj
 <<
-  /Title <FEFF00300030002000450069006E006600FC006800720075006E0067>
+  /Title (00 Intro)
   /Creator (Typst 0.14.2)
-  /ModDate (D:20261025195207+01'00)
-  /CreationDate (D:20261025195207+01'00)
+  /ModDate (D:20261025202551+01'00)
+  /CreationDate (D:20261025202551+01'00)
 >>
 endobj
 
 242 0 obj
 <<
-  /Length 1089
+  /Length 1083
   /Type /Metadata
   /Subtype /XML
 >>
 stream
-<?xpacket begin="ï»¿" id="W5M0MpCehiHzreSzNTczkc9d"?><x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="xmp-writer"><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/"  xmlns:xmp="http://ns.adobe.com/xap/1.0/"  xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"  xmlns:xmpTPg="http://ns.adobe.com/xap/1.0/t/pg/"  xmlns:pdf="http://ns.adobe.com/pdf/1.3/" ><dc:title><rdf:Alt><rdf:li xml:lang="x-default">00 EinfÃ¼hrung</rdf:li></rdf:Alt></dc:title><xmp:CreatorTool>Typst 0.14.2</xmp:CreatorTool><dc:language><rdf:Bag><rdf:li>en</rdf:li></rdf:Bag></dc:language><xmp:ModifyDate>2026-10-25T19:52:07+01:00</xmp:ModifyDate><xmp:CreateDate>2026-10-25T19:52:07+01:00</xmp:CreateDate><xmpTPg:NPages>13</xmpTPg:NPages><dc:format>application/pdf</dc:format><xmpMM:InstanceID>1AWP4cxLKzj2WIsn21H7Sg==</xmpMM:InstanceID><xmpMM:DocumentID>1AWP4cxLKzj2WIsn21H7Sg==</xmpMM:DocumentID><xmpMM:RenditionClass>proof</xmpMM:RenditionClass><pdf:PDFVersion>1.7</pdf:PDFVersion></rdf:Description></rdf:RDF></x:xmpmeta><?xpacket end="r"?>
+<?xpacket begin="ï»¿" id="W5M0MpCehiHzreSzNTczkc9d"?><x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="xmp-writer"><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/"  xmlns:xmp="http://ns.adobe.com/xap/1.0/"  xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"  xmlns:xmpTPg="http://ns.adobe.com/xap/1.0/t/pg/"  xmlns:pdf="http://ns.adobe.com/pdf/1.3/" ><dc:title><rdf:Alt><rdf:li xml:lang="x-default">00 Intro</rdf:li></rdf:Alt></dc:title><xmp:CreatorTool>Typst 0.14.2</xmp:CreatorTool><dc:language><rdf:Bag><rdf:li>en</rdf:li></rdf:Bag></dc:language><xmp:ModifyDate>2026-10-25T20:25:51+01:00</xmp:ModifyDate><xmp:CreateDate>2026-10-25T20:25:51+01:00</xmp:CreateDate><xmpTPg:NPages>13</xmpTPg:NPages><dc:format>application/pdf</dc:format><xmpMM:InstanceID>FmpHuvsNUaAdnaY5yQScsQ==</xmpMM:InstanceID><xmpMM:DocumentID>FmpHuvsNUaAdnaY5yQScsQ==</xmpMM:DocumentID><xmpMM:RenditionClass>proof</xmpMM:RenditionClass><pdf:PDFVersion>1.7</pdf:PDFVersion></rdf:Description></rdf:RDF></x:xmpmeta><?xpacket end="r"?>
 endstream
 endobj
 
@@ -4972,116 +4967,116 @@ xref
 0000017443 00000 n
 0000017503 00000 n
 0000017666 00000 n
-0000018070 00000 n
-0000018158 00000 n
-0000018439 00000 n
-0000019280 00000 n
-0000020630 00000 n
-0000020820 00000 n
-0000021709 00000 n
-0000021800 00000 n
-0000022067 00000 n
-0000023665 00000 n
-0000027910 00000 n
-0000028092 00000 n
-0000028344 00000 n
-0000028430 00000 n
-0000028680 00000 n
-0000029380 00000 n
-0000029898 00000 n
-0000030060 00000 n
-0000030657 00000 n
-0000030747 00000 n
-0000031030 00000 n
-0000032039 00000 n
-0000034301 00000 n
-0000034490 00000 n
-0000034796 00000 n
-0000034882 00000 n
-0000035150 00000 n
-0000035934 00000 n
-0000036936 00000 n
-0000037038 00000 n
-0000037140 00000 n
-0000037242 00000 n
-0000037510 00000 n
-0000038073 00000 n
-0000038803 00000 n
-0000038990 00000 n
-0000039380 00000 n
-0000039469 00000 n
-0000039731 00000 n
-0000040642 00000 n
-0000042073 00000 n
-0000042111 00000 n
-0000042149 00000 n
-0000042572 00000 n
-0000042931 00000 n
-0000042977 00000 n
-0000043023 00000 n
-0000043069 00000 n
-0000043379 00000 n
-0000043689 00000 n
-0000043999 00000 n
-0000044290 00000 n
-0000044645 00000 n
-0000044936 00000 n
-0000045307 00000 n
-0000045598 00000 n
-0000046593 00000 n
-0000046943 00000 n
-0000047534 00000 n
-0000047843 00000 n
-0000048630 00000 n
-0000048903 00000 n
-0000049213 00000 n
-0000049467 00000 n
-0000049724 00000 n
-0000049979 00000 n
-0000050239 00000 n
-0000050499 00000 n
-0000050765 00000 n
-0000051028 00000 n
-0000051300 00000 n
-0000051567 00000 n
-0000051822 00000 n
-0000052077 00000 n
-0000052342 00000 n
-0000052610 00000 n
-0000052868 00000 n
-0000053295 00000 n
-0000054646 00000 n
-0000054901 00000 n
-0000055158 00000 n
-0000055489 00000 n
-0000056040 00000 n
-0000056314 00000 n
-0000056667 00000 n
-0000056959 00000 n
-0000109002 00000 n
-0000109294 00000 n
-0000173196 00000 n
-0000173488 00000 n
-0000248959 00000 n
-0000249251 00000 n
-0000291494 00000 n
-0000294777 00000 n
-0000395342 00000 n
-0000396268 00000 n
-0000402393 00000 n
-0000403210 00000 n
-0000404725 00000 n
-0000405940 00000 n
-0000409792 00000 n
-0000409987 00000 n
-0000411167 00000 n
+0000018027 00000 n
+0000018113 00000 n
+0000018392 00000 n
+0000019176 00000 n
+0000020280 00000 n
+0000020470 00000 n
+0000021359 00000 n
+0000021450 00000 n
+0000021717 00000 n
+0000023315 00000 n
+0000027560 00000 n
+0000027742 00000 n
+0000027994 00000 n
+0000028080 00000 n
+0000028330 00000 n
+0000029030 00000 n
+0000029548 00000 n
+0000029710 00000 n
+0000030307 00000 n
+0000030397 00000 n
+0000030680 00000 n
+0000031689 00000 n
+0000033951 00000 n
+0000034140 00000 n
+0000034446 00000 n
+0000034532 00000 n
+0000034800 00000 n
+0000035584 00000 n
+0000036586 00000 n
+0000036688 00000 n
+0000036790 00000 n
+0000036892 00000 n
+0000037160 00000 n
+0000037723 00000 n
+0000038453 00000 n
+0000038640 00000 n
+0000039030 00000 n
+0000039119 00000 n
+0000039381 00000 n
+0000040292 00000 n
+0000041723 00000 n
+0000041761 00000 n
+0000041799 00000 n
+0000042222 00000 n
+0000042581 00000 n
+0000042627 00000 n
+0000042673 00000 n
+0000042719 00000 n
+0000043029 00000 n
+0000043339 00000 n
+0000043649 00000 n
+0000043940 00000 n
+0000044293 00000 n
+0000044584 00000 n
+0000044955 00000 n
+0000045246 00000 n
+0000046241 00000 n
+0000046591 00000 n
+0000047182 00000 n
+0000047491 00000 n
+0000048278 00000 n
+0000048551 00000 n
+0000048861 00000 n
+0000049115 00000 n
+0000049372 00000 n
+0000049627 00000 n
+0000049887 00000 n
+0000050147 00000 n
+0000050413 00000 n
+0000050676 00000 n
+0000050948 00000 n
+0000051215 00000 n
+0000051470 00000 n
+0000051725 00000 n
+0000051990 00000 n
+0000052258 00000 n
+0000052516 00000 n
+0000052943 00000 n
+0000054294 00000 n
+0000054549 00000 n
+0000054806 00000 n
+0000055137 00000 n
+0000055688 00000 n
+0000055962 00000 n
+0000056315 00000 n
+0000056607 00000 n
+0000108650 00000 n
+0000108942 00000 n
+0000172844 00000 n
+0000173136 00000 n
+0000248607 00000 n
+0000248899 00000 n
+0000291142 00000 n
+0000294425 00000 n
+0000394990 00000 n
+0000395916 00000 n
+0000402041 00000 n
+0000402858 00000 n
+0000404373 00000 n
+0000405588 00000 n
+0000409440 00000 n
+0000409587 00000 n
+0000410761 00000 n
 trailer
 <<
   /Size 244
   /Root 243 0 R
   /Info 241 0 R
-  /ID [(1AWP4cxLKzj2WIsn21H7Sg==) (1AWP4cxLKzj2WIsn21H7Sg==)]
+  /ID [(FmpHuvsNUaAdnaY5yQScsQ==) (FmpHuvsNUaAdnaY5yQScsQ==)]
 >>
 startxref
-411424
+411018
 %%EOF
