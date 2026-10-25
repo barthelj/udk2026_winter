@@ -180,18 +180,18 @@
     ]
   },
   {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "",
-    "section": "",
-    "text": "References"
-  },
-  {
     "objectID": "readme.html",
     "href": "readme.html",
     "title": "",
     "section": "",
     "text": "Geschichten in Daten – finden und erzählen\nMaterial zum Seminar an der UdK Berlin"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "",
+    "section": "",
+    "text": "References"
   },
   {
     "objectID": "index.html",
@@ -228,7 +228,7 @@
     "href": "index.html#orientierung",
     "title": "Seminarübersicht",
     "section": "Orientierung",
-    "text": "Orientierung\n\n\n\nDiese Dokumente\nSemesterplan\nDaten\n\n\n\n\nx\nx\nx",
+    "text": "Orientierung\n\n\n\nDiese Dokumente\nSemesterplan\nDaten\n\n\n\n\n🏡\n🧾\n📂",
     "crumbs": [
       "Seminarübersicht"
     ]
@@ -238,7 +238,7 @@
     "href": "index.html#über-dieses-material",
     "title": "Seminarübersicht",
     "section": "Über dieses Material",
-    "text": "Über dieses Material\nDieses Seminarmaterial wurde gebaut mit Quarto, für die Webansicht mit dem Theme “Yeti”. Die Grafiken kommen von undraw.com und dürfen von allen für alles frei verwendet werden. Vielen Dank dafür!\nUnd als Notizzettel: Die Fokus-Farbe ist #006080.",
+    "text": "Über dieses Material\nDieses Seminarmaterial wurde gebaut mit Quarto, für die Webansicht mit dem Theme “Flatly” bzw. “Darkly”. Die Grafiken kommen von undraw.com und dürfen von allen für alles frei verwendet werden. Vielen Dank dafür!\nUnd als Notizzettel: Die Fokus-Farbe ist #006080.",
     "crumbs": [
       "Seminarübersicht"
     ]
@@ -308,7 +308,7 @@
     "href": "session_notes/2026-10-15_intro.html#semesterplan",
     "title": "00 Einführung",
     "section": "Semesterplan",
-    "text": "Semesterplan\n\n\n\nDatum\nThema\nLink\n\n\n\n\n15.10.2026\nEinführung\nKapitel\n\n\n22.10.2026\nWorkflow & Werkzeuge\nKapitel\n\n\n29.10.2026\nIch habe Daten, was jetzt?\nKapitel\n\n\n05.11.2026\nIch habe eine Frage, aber keine Daten – was jetzt?\nKapitel\n\n\n12.11.2026\nWie funktionieren Terminal & Server\nKapitel\n\n\n19.11.2026\nRaum für eigene Ideen\nKapitel\n\n\n26.11.2026\nArbeit mit Kartendaten\nKapitel\n\n\n03.12.2026\nElemente des Storytelling\nKapitel\n\n\n10.12.2026\nBild und Text, Audio und Video als Datenquelle\nKapitel\n\n\n17.12.2026\nEigene Ideen umsetzen\nKapitel\n\n\n07.01.2027\nTexten in und um Grafiken herum\nKapitel\n\n\n14.01.2027\nWie funktionieren Datenbanken\nKapitel\n\n\n21.01.2027\nNIAM\nKapitel\n\n\n28.01.2027\ntba\nKapitel\n\n\n04.02.2027\ntba\nKapitel\n\n\n11.02.2027\ntba\nKapitel",
+    "text": "Semesterplan\n\n\n\nDatum\nTopic\n\n\n\n\n15.10.2026\nEinführung\n\n\n22.10.2026\nWorkflow & Werkzeuge\n\n\n29.10.2026\nIch habe Daten, was jetzt?\n\n\n05.11.2026\nIch habe eine Frage, aber keine Daten – was jetzt?\n\n\n12.11.2026\nWie funktionieren Terminal & Server\n\n\n19.11.2026\nRaum für eigene Ideen\n\n\n26.11.2026\nArbeit mit Kartendaten\n\n\n03.12.2026\nElemente des Storytelling\n\n\n10.12.2026\nBild und Text, Audio und Video als Datenquelle\n\n\n17.12.2026\nEigene Ideen umsetzen\n\n\n07.01.2027\nTexten in und um Grafiken herum\n\n\n14.01.2027\nWie funktionieren Datenbanken\n\n\n21.01.2027\nNIAM\n\n\n28.01.2027\ntba\n\n\n04.02.2027\ntba\n\n\n11.02.2027\ntba",
     "crumbs": [
       "00 Einführung"
     ]
