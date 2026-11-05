@@ -4,7 +4,7 @@
     "href": "session_notes/2026-11-05_research.html",
     "title": "03 Research",
     "section": "",
-    "text": "Ein Beispiel für eine Musik-Geschichte:",
+    "text": "HinweisWas wir heute machen\n\n\n\n\nganz viele praktische Übungen: arbeiten mit Tabellen\nTabellenkalkulationsprogramme und Code\nRecherchewege und was zu beachten ist\nnochmal Daten im Browser anschauen",
     "crumbs": [
       "03 Research"
     ]
@@ -419,6 +419,16 @@
     "title": "03 Research",
     "section": "Übung: Drogerie-Produkte",
     "text": "Übung: Drogerie-Produkte\nWie viel kosten 100ml Sonnencreme im Durchschnitt und was ist der niedrigste Preis für 100ml Sonnencreme?\n\n\n\n\n\n\n\nCode anzeigen\n\nurl &lt;- \"https://product-search.services.dmtech.com/de/search/crawl?query=Gesicht&allCategories.id=020401&pageSize=30&searchType=editorial-search&sort=editorial_relevance&type=search-static&enablePharmacy=true\"\nx &lt;- fromJSON(url, simplifyVector = FALSE)\n\ndf &lt;- x |&gt; \n  rrapply(how=\"melt\")",
+    "crumbs": [
+      "03 Research"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-11-05_research.html#übung-wein",
+    "href": "session_notes/2026-11-05_research.html#übung-wein",
+    "title": "03 Research",
+    "section": "Übung: Wein",
+    "text": "Übung: Wein\nDer brasilianische Informatik-Professor Rogério Xavier de Azambuja hat 2022 einen großen Datensatz erstellt mit Weinen und “Metadaten”, z.B. wie gern die Weine getrunken werden, woher sie kommen oder zu welchen Gerichten sie passen. Dieser Datensatz ist auf GitHub (kleinere Test-Version mit 100 Einträgen) oder in einem Google-Drive verfügbar. Zum Einstieg eignet sich diese csv-Datei.\n→ Was verraten uns die Daten über die Welt der Weine – und welcher wurde am besten bewertet?\n\n\n\n\n\nEin Beispiel für eine Musik-Geschichte:\n\nThe Pudding, “Love Songs, RIP”",
     "crumbs": [
       "03 Research"
     ]
