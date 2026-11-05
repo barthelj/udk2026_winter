@@ -4,7 +4,7 @@
     "href": "session_notes/2026-11-05_research.html",
     "title": "03 Research",
     "section": "",
-    "text": "tbd",
+    "text": "Ein Beispiel für eine Musik-Geschichte:",
     "crumbs": [
       "03 Research"
     ]
@@ -371,6 +371,56 @@
     "text": "tbd",
     "crumbs": [
       "08 Multimedia"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-11-05_research.html#übung-musik-us-charts",
+    "href": "session_notes/2026-11-05_research.html#übung-musik-us-charts",
+    "title": "03 Research",
+    "section": "Übung: Musik – US-Charts",
+    "text": "Übung: Musik – US-Charts\nSeit 1958 veröffentlicht das US-Magazin “Billboard” jeden Dienstag die “beliebtesten” Songs – basierend auf Verkäufen, Airplay und Streaming der jeweiligen Erfassungswoche. Alle Top-Titel hat Chris Dalla Riva für seinen Blog und sein Buch zusammengetragen und freundlicherweise als Google-Tabelle veröffentlicht: Billboard Hot 100 Number Ones Database.",
+    "crumbs": [
+      "03 Research"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-11-05_research.html#datenquellen",
+    "href": "session_notes/2026-11-05_research.html#datenquellen",
+    "title": "03 Research",
+    "section": "Datenquellen",
+    "text": "Datenquellen\n\n\n\n\n\n\nStatistisches Bundesamt\nStatistische Landesämter\ngovdata.de – Daten von Behörden, Kommunen, etc.\nDrucksachen Bundestag\nGoogle Dataset Search\n\n\nWelche Daten dürfen wir benutzen?\n“Open Data” ist ein feststehender Begriff seit vielen Jahren. In Deutschland gibt es dafür verschiedenste Regelungen, aber keine umfassende Verpflichtung, dass öffentliche Einrichtungen offene Daten verfügbar machen müssen. Dabei bedeutet das, dass man Daten frei nutzen kann, ohne weitere Einschränkungen:\n\n“Open means anyone can freely access, use, modify, and share for any purpose (subject, at most, to requirements that preserve provenance and openness).”\nhttps://opendefinition.org/\n\nIn der Praxis ist das in Deutschland oft anders umgesetzt und die datenveröffentlichende Stelle verlangt ihre Nennung. Das regelt die jeweilige Lizenz:\n\n“Gemeinfreiheit” CCO\nCC BY 4.0\n“Datenlizenz Deutschland” BY, Zero\n\ngovdata.de rät zu CC-Lizenzen",
+    "crumbs": [
+      "03 Research"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-11-05_research.html#beispiel-freie-plätze-sind-rar-die-lage-in-bayerischen-frauenhäusern",
+    "href": "session_notes/2026-11-05_research.html#beispiel-freie-plätze-sind-rar-die-lage-in-bayerischen-frauenhäusern",
+    "title": "03 Research",
+    "section": "Beispiel: “Freie Plätze sind rar: Die Lage in bayerischen Frauenhäusern”",
+    "text": "Beispiel: “Freie Plätze sind rar: Die Lage in bayerischen Frauenhäusern”\n2026: br24.de + CORRECTIV.Lokal → ndr.de, KATAPULT Sachsen, SWR…\n2023: correctiv.org\n\n\n\n\n\n→ Original-Website: frauenhaus-suche.de",
+    "crumbs": [
+      "03 Research"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-11-05_research.html#übung-defekte-aufzüge-rolltreppen-in-münchen",
+    "href": "session_notes/2026-11-05_research.html#übung-defekte-aufzüge-rolltreppen-in-münchen",
+    "title": "03 Research",
+    "section": "Übung: Defekte Aufzüge / Rolltreppen in München",
+    "text": "Übung: Defekte Aufzüge / Rolltreppen in München\n\n\n\n\n\nWebsite der Münchner Verkehrsgesellschaft MVG\nSchritt 1: Was wünscht sich die Website-Betreiberin – was dürfen wir automatisiert auslesen? → robots.txt\nSchritt 2: Wir schauen uns um: Was brauchen wir? → Developer-Tools öffnen (Rechtsklick oder Tastenkombination, je nach Browser + Betriebssystem) → Tipp: Interessant ist oft “Network → XHR”.\n\n\n\n\n\n\nHinweisWas ist XHR?\n\n\n\nWebseiten bestehen technisch aus HTML-Code. Hier haken “echte Programmierer” gern ein und korrigieren: HTML ist aber nur eine Auszeichnungssprache, das hat nichts mit Code zu tun.\nStimmt: HTML heißt HyperTextMarkupLanguage und kann vor allem verschiedene Elemente auf einer Website darstellen: Eine Überschrift auf dem höchsten Level wird markiert mit &lt;h1&gt; am Anfang und &lt;/h1&gt; am Ende, eher eine Unterüberschrift mit &lt;h2&gt; und &lt;/h2&gt;, eine Unterunterüberschrift mit &lt;h3&gt; und &lt;/h3&gt; und so weiter…\nLinks sind oft interessant, die sind gekennzeichnet mit &lt;a href=\"https://example.com\"&gt;Hier klicken&lt;/a&gt;. Hier klicken steht dann in Link-Formatierung auf der Website. Der Teil in Anführungszeichen hinter href= ist die URL, wo man hingeleitet wird.\nWenn jetzt eine Website was “können” soll, sich also anpassen oder Daten laden, dann nutzt man dafür JavaScript. Das ist eine Programmiersprache, die beispielsweise “wenn, dann…”-Befehle ausführen kann: “Wenn drei Sekunden vorbei sind, dann zeigst du ein neues Bild an, lieber Browser.” Oder eben: “Wenn dieser Code geladen wird, dann hole bitte die Daten im Hintergrund von folgender Website.”\nUnd solche Daten werden dann im Hintergrund übertragen, ohne dass die Website neu geladen werden muss, mittels eines “XHR”, oder ausgeschrieben “XMLHttpRequest”. Der Server bekommt also eine Anfrage: Ey, gib mal Daten. Und zwar in verschiedenen Formaten, XML steht im Namen, kann aber auch JSON sein.\n\n\nSchritt 3: Wir schauen uns die reinen Daten im Rohformat “JSON” an: Schnittstelle\nSchritt 4: Wir speichern uns die Daten ab, um sie lokal weiterzuverarbeiten.\n\n\nR-Code ausklappen\n\n\nlibrary(jsonlite)\nlibrary(rrapply)\n\nx &lt;- fromJSON(\"https://www.mvg.de/.rest/mvgZoom/api/stations\", simplifyVector = FALSE)\n\ndf &lt;- x |&gt; \n  rrapply(how=\"melt\")",
+    "crumbs": [
+      "03 Research"
+    ]
+  },
+  {
+    "objectID": "session_notes/2026-11-05_research.html#übung-drogerie-produkte",
+    "href": "session_notes/2026-11-05_research.html#übung-drogerie-produkte",
+    "title": "03 Research",
+    "section": "Übung: Drogerie-Produkte",
+    "text": "Übung: Drogerie-Produkte\nWie viel kosten 100ml Sonnencreme im Durchschnitt und was ist der niedrigste Preis für 100ml Sonnencreme?\n\n\n\n\n\n\n\nCode anzeigen\n\nurl &lt;- \"https://product-search.services.dmtech.com/de/search/crawl?query=Gesicht&allCategories.id=020401&pageSize=30&searchType=editorial-search&sort=editorial_relevance&type=search-static&enablePharmacy=true\"\nx &lt;- fromJSON(url, simplifyVector = FALSE)\n\ndf &lt;- x |&gt; \n  rrapply(how=\"melt\")",
+    "crumbs": [
+      "03 Research"
     ]
   }
 ]
